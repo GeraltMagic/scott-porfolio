@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Royals Dashboard — Scott Herford</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="../index.html" class="nav-name">Scott Herford</a>
+      <ul class="nav-links">
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="https://github.com/cb5697zp4v-lang" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="case-study">
+    <div class="container">
+
+      <a href="../index.html" class="back-link">← Back</a>
+
+      <h1>Royals Player Insights Dashboard</h1>
+      <p style="color: var(--muted); font-size: 0.95rem;">
+        Sports analytics engine with forecasting and causal inference
+      </p>
+
+      <div class="case-meta">
+        <div class="meta-item">
+          <span class="meta-label">Role</span>
+          <span class="meta-value">Solo builder (data PM + analyst)</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Year</span>
+          <span class="meta-value">2025</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Status</span>
+          <span class="meta-value">Complete</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Stack</span>
+          <span class="meta-value">Python · pandas · statsmodels · DoWhy · pybaseball</span>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <h2>Problem</h2>
+        <p>
+          MLB player performance data is public but scattered. Standard tools give you box scores and
+          basic stats. Nobody gives you a single local tool that does forecasting, feature importance,
+          causal inference, and directionality analysis on a player you care about — without paying for
+          a vendor platform.
+        </p>
+        <p>
+          The goal: build a real analytics engine for KC Royals players. Something that goes past
+          "what happened" and into "what drives performance" and "what will happen next."
+        </p>
+      </div>
+
+      <div class="cs-section">
+        <h2>What the engine does</h2>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Module</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Forecasting</td>
+                <td>SARIMAX time-series model for player metrics across a date range. Falls back to EWMA when statsmodels isn't present.</td>
+              </tr>
+              <tr>
+                <td>Feature Importance</td>
+                <td>Identifies which inputs drive the target metric. Surfaces the top features for a given player and season range.</td>
+              </tr>
+              <tr>
+                <td>Directionality (PDP)</td>
+                <td>Partial dependence plots show how each feature influences the outcome — not just importance rank but direction and shape.</td>
+              </tr>
+              <tr>
+                <td>Causal Inference</td>
+                <td>Uses DoWhy or EconML to estimate a simple causal effect. Separates correlation from causation in the performance signal.</td>
+              </tr>
+              <tr>
+                <td>Anomaly Detection</td>
+                <td>Flags outlier games or stretches in the data.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <h2>Key Decisions</h2>
+
+        <div class="decision-block">
+          <strong>CLI-first</strong>
+          <p>Streamlit dependency removed from core. Anyone can run <code style="font-family: var(--mono); font-size: 0.85em;">python app.py --mode cli --player "Bobby Witt Jr."</code> without a UI install. Streamlit is lazily imported as optional.</p>
+        </div>
+
+        <div class="decision-block">
+          <strong>Synthetic data fallback</strong>
+          <p>Realistic demo data generated procedurally when real data is unavailable. Makes the tool portable and testable offline — CI/sandbox-friendly.</p>
+        </div>
+
+        <div class="decision-block">
+          <strong>Soft dependency stack</strong>
+          <p>statsmodels, DoWhy, EconML — all optional. The engine degrades gracefully to simpler methods if they're missing. No hard requirements beyond pandas and numpy.</p>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <h2>Example CLI</h2>
+        <pre style="background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 16px 20px; font-family: var(--mono); font-size: 0.825rem; color: var(--text); overflow-x: auto; line-height: 1.6;">python app.py --mode cli --player "Bobby Witt Jr." --start-year 2023 --end-year 2025
+python app.py --run-tests</pre>
+        <p style="margin-top: 12px;">All outputs — forecasts, feature importance plots, PDP charts — saved to <code style="font-family: var(--mono); font-size: 0.85em; color: var(--accent);">./outputs/</code>.</p>
+      </div>
+
+      <div class="cs-section">
+        <h2>Learnings</h2>
+        <ul>
+          <li>Graceful degradation is underrated. Writing the fallback logic — synthetic data, EWMA, no-Streamlit mode — took extra time but made the tool actually usable in any environment.</li>
+          <li>Causal inference is a differentiator in sports analytics. Most tools show correlation. Showing a causal estimate — even a simple one — is a different conversation.</li>
+          <li>CLI-first is the right default for data tools that need to run in automation or CI. UI is additive, not the foundation.</li>
+        </ul>
+      </div>
+
+      <div class="cs-section">
+        <h2>Source</h2>
+        <p>
+          <a href="https://github.com/cb5697zp4v-lang" target="_blank" rel="noopener">github.com/cb5697zp4v-lang</a>
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Scott Herford &mdash; <a href="https://github.com/cb5697zp4v-lang/scott-portfolio" target="_blank" rel="noopener">GitHub</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

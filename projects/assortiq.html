@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AssortIQ — Scott Herford</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="../index.html" class="nav-name">Scott Herford</a>
+      <ul class="nav-links">
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="https://github.com/cb5697zp4v-lang" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="case-study">
+    <div class="container">
+
+      <a href="../index.html" class="back-link">← Back</a>
+
+      <h1>AssortIQ</h1>
+      <p style="color: var(--muted); font-size: 0.95rem;">
+        AI-powered assortment optimization for mid-market retail
+      </p>
+
+      <div class="case-meta">
+        <div class="meta-item">
+          <span class="meta-label">Role</span>
+          <span class="meta-value">Solo builder (PM + engineer)</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Year</span>
+          <span class="meta-value">2025</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Status</span>
+          <span class="meta-value">Complete</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Stack</span>
+          <span class="meta-value">Python · FastMCP · Anthropic SDK · Chronos · sentence-transformers</span>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <h2>Problem</h2>
+        <p>
+          Retail buyers and category managers make high-stakes assortment decisions — what to carry,
+          how deep, where — using fragmented tools and gut instinct. Pull sales data from one system,
+          check inventory in another, open a spreadsheet, manually cross-reference vendor terms, make a call.
+          For one store format, that's painful. Across multiple banners and geographies, it breaks.
+        </p>
+        <p>
+          Three forces make this worse:
+        </p>
+        <ul>
+          <li><strong>Spreadsheet dependency.</strong> Most mid-market retailers still plan assortments in Excel. No version control, no collaboration, no real-time demand signal.</li>
+          <li><strong>Localization is a guess.</strong> Most retailers apply a single national assortment with manual overrides. That's exception management, not optimization.</li>
+          <li><strong>Existing tools are built for enterprise.</strong> Blue Yonder, RELEX, and Oracle cost seven figures and take 6–18 months to implement. No product serves the mid-market retailer who needs AI-driven decisions without enterprise overhead.</li>
+        </ul>
+      </div>
+
+      <div class="cs-section">
+        <h2>Target Users</h2>
+        <p>
+          <strong>Primary — Category Manager.</strong> Owns a category P&L. Decides what's in and out.
+          Drowning in spreadsheets. Can't see cross-store performance in real time.
+        </p>
+        <p>
+          <strong>Secondary — Buyer / Merchant.</strong> Executes the buy. Buys blind on what's selling
+          at store level until it's too late. Overbuys safe SKUs, underbuys emerging ones.
+        </p>
+        <p>
+          V1 is built for the Category Manager — they own the decision, feel the pain daily, and have budget authority.
+        </p>
+      </div>
+
+      <div class="cs-section">
+        <h2>Solution</h2>
+        <p>MCP server with 6 tools and 3 resources, built on FastMCP and integrated with Claude via the Anthropic SDK.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Tool</th>
+                <th>What it does</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>forecast_demand</td>
+                <td>SKU-level demand forecasting using Chronos-Bolt time-series model with EWMA fallback</td>
+              </tr>
+              <tr>
+                <td>find_similar_items</td>
+                <td>Embedding-based SKU similarity using BGE sentence-transformers</td>
+              </tr>
+              <tr>
+                <td>cluster_stores</td>
+                <td>Auto-segments stores into data-driven clusters based on sales patterns and format</td>
+              </tr>
+              <tr>
+                <td>get_assortment_recommendations</td>
+                <td>Add/drop/swap recommendations at the store-cluster level</td>
+              </tr>
+              <tr>
+                <td>get_category_health</td>
+                <td>Scorecard per category: revenue, margin, sell-through, out-of-stocks, SKU redundancy</td>
+              </tr>
+              <tr>
+                <td>search_skus</td>
+                <td>Semantic search across the SKU catalog</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Resources: 100-SKU catalog, 20-store attributes, and aggregate sales summary — all available to the model at inference time.</p>
+      </div>
+
+      <div class="cs-section">
+        <h2>Key Decisions</h2>
+
+        <div class="decision-block">
+          <strong>MCP over REST API</strong>
+          <p>Built as an MCP server so the tools are natively callable by Claude. No custom client code needed — the model drives the orchestration.</p>
+        </div>
+
+        <div class="decision-block">
+          <strong>Chronos for forecasting</strong>
+          <p>Zero-shot time-series model that works without training data. Handles cold-start SKUs out of the box. Falls back to EWMA when the pipeline isn't available.</p>
+        </div>
+
+        <div class="decision-block">
+          <strong>Phased rollout (V1a / V1b)</strong>
+          <p>Full scope spans 7 capabilities with 3 external data integration layers. V1a ships scorecard, recommendations, clustering, and one syndicated source. V1b adds forecasting, experimentation, and new item introduction. Keeps time-to-value tight without scoping down ambition.</p>
+        </div>
+
+        <div class="decision-block">
+          <strong>Human approves every recommendation</strong>
+          <p>The system recommends — add SKU X, drop SKU Y, run a test in the Southeast cluster. A human approves or overrides. AI as decision support, not autopilot.</p>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <h2>Competitive Positioning</h2>
+        <p>
+          The incumbents (Blue Yonder, RELEX, Oracle) sell to Walmart and Tesco. Position against them on
+          speed-to-value: deploy in weeks not months, no dedicated planning team, SaaS pricing that doesn't
+          require a board-level procurement decision.
+        </p>
+        <p>
+          Toolio is the closest mid-market comp but stronger on financial planning than assortment intelligence.
+          The differentiator is the recommendation engine — not "here's your data organized" but "here's what
+          to do about it," informed by demand signals, store clusters, and competitor intelligence.
+        </p>
+      </div>
+
+      <div class="cs-section">
+        <h2>Learnings</h2>
+        <ul>
+          <li>Zero-shot forecasting is a legitimate unlock for cold-start problems. Chronos handles new SKUs without historical data — that's a hard problem for traditional methods.</li>
+          <li>MCP dramatically simplifies tool orchestration. Writing tools as MCP resources means the model handles when and how to call them. Less glue code, more capability.</li>
+          <li>Phasing on external data integration was the right call. Nielsen and Circana APIs are gated and expensive. Prove value with one source before investing in broader integration.</li>
+        </ul>
+      </div>
+
+      <div class="cs-section">
+        <h2>Source</h2>
+        <p>
+          <a href="https://github.com/cb5697zp4v-lang" target="_blank" rel="noopener">github.com/cb5697zp4v-lang</a>
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Scott Herford &mdash; <a href="https://github.com/cb5697zp4v-lang/scott-portfolio" target="_blank" rel="noopener">GitHub</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
