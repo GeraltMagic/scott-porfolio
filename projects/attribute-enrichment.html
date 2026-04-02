@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attribute Enrichment — Scott Herford</title>
+  <meta name="description" content="Case study: Self-improving attribute enrichment system for ecommerce discovery." />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <nav class="cs-nav">
+    <div class="container">
+      <a href="../index.html" class="cs-back">← Back to portfolio</a>
+      <a href="https://www.linkedin.com/in/james-herford-62110391/" target="_blank" rel="noopener" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.825rem;">LinkedIn</a>
+    </div>
+  </nav>
+
+  <main class="cs-body">
+    <div class="container">
+
+      <div class="cs-header">
+        <h1>Attribute Enrichment for Ecommerce Discovery</h1>
+        <p class="subtitle">Self-improving attribute enrichment system powered by ML and behavioral feedback loops</p>
+        <div class="cs-meta">
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Role</span>
+            <span class="cs-meta-value">Solo — PM + engineer</span>
+          </div>
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Year</span>
+            <span class="cs-meta-value">2025</span>
+          </div>
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Status</span>
+            <span class="cs-meta-value">Working prototype</span>
+          </div>
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Stack</span>
+            <span class="cs-meta-value">React · Hooks · Zero external dependencies</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Problem -->
+      <div class="cs-section">
+        <p class="cs-section-label">Problem</p>
+        <p>
+          Ecommerce discovery depends on structured product attributes — color, size, material, style, occasion,
+          brand tier. Most catalogs have incomplete and inconsistent data. That translates directly into poor
+          search relevance, weak filtering, high zero-result rates, and lost revenue.
+        </p>
+        <p>
+          The root issues:
+        </p>
+        <ul>
+          <li><strong>Long-tail SKUs have no attributes.</strong> High-velocity items get manually enriched. Everything else is missing data that never gets touched.</li>
+          <li><strong>No confidence signal.</strong> Existing systems treat all attribute values as equal — a value manually verified by a merchant and one scraped from a product title are indistinguishable.</li>
+          <li><strong>No feedback loop.</strong> Behavioral signals — what users search for, filter on, and convert from — aren't fed back into the attribute data. The system doesn't learn.</li>
+        </ul>
+      </div>
+
+      <!-- Vision -->
+      <div class="cs-section">
+        <p class="cs-section-label">Product vision</p>
+        <p>
+          Build a self-improving attribute enrichment system powered by ML and behavioral feedback loops
+          that continuously enhances data quality and drives measurable conversion lift.
+        </p>
+        <p>
+          Attribute enrichment should evolve from a data cleanup task into a core revenue-driving system
+          that learns from customer behavior. The north star metric is revenue lift — driven by improvements
+          in conversion rate, search success rate, and facet engagement.
+        </p>
+      </div>
+
+      <!-- System overview -->
+      <div class="cs-section">
+        <p class="cs-section-label">System overview</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Layer</th><th>Inputs</th><th>Outputs</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ingestion</td>
+                <td>Product catalog, behavioral data (searches, clicks, conversions), embeddings</td>
+                <td>Normalized product records with attribute candidates</td>
+              </tr>
+              <tr>
+                <td>Processing</td>
+                <td>Product titles, descriptions, similar-item embeddings, behavioral signals</td>
+                <td>Attribute values with confidence scores and source labels (catalog / ml_title / ml_embedding / behavioral)</td>
+              </tr>
+              <tr>
+                <td>Output</td>
+                <td>Enriched attribute store</td>
+                <td>Improved filter facets, better search ranking, reduced zero-result rate</td>
+              </tr>
+              <tr>
+                <td>Feedback loop</td>
+                <td>Conversion signals, facet engagement, search refinements</td>
+                <td>Confidence score updates — system improves continuously without manual re-enrichment</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- What I built -->
+      <div class="cs-section">
+        <p class="cs-section-label">What the prototype does</p>
+        <p>Single-file React component. 12 SKUs across 6 categories. 6 tracked attributes per SKU. Four interactive tabs:</p>
+
+        <div class="decision-card">
+          <strong>Catalog tab — confidence-aware attribute view</strong>
+          <p>Every attribute cell shows its value, confidence score (color-coded green/yellow/red), and source label. Filter by All / Missing / Low confidence / Needs review. Click "Run Enrichment" to step the ML pipeline through each SKU — missing attributes fill in with animated highlights.</p>
+        </div>
+
+        <div class="decision-card">
+          <strong>Review Queue tab — human-in-the-loop</strong>
+          <p>Medium-confidence attributes (65–85%) surface for human review. Accept promotes to verified and bumps confidence. Reject clears the value and flags it for re-enrichment. Every approval action updates the live KPIs.</p>
+        </div>
+
+        <div class="decision-card">
+          <strong>Signals tab — behavioral feedback loop</strong>
+          <p>"Simulate Session" generates realistic behavioral events — searches, filter clicks, add-to-carts, conversions. Each event targets a specific attribute on a random SKU and boosts its confidence score. The feedback loop is visible in real time: watch a low-confidence "occasion" value on a yoga pant climb after workout-related searches.</p>
+        </div>
+
+        <div class="decision-card">
+          <strong>Facet Preview tab — before vs. after</strong>
+          <p>Side-by-side comparison of filter coverage and estimated zero-result rate before and after enrichment. Shows exactly what running the pipeline unlocks for customers — more filter options, fewer dead ends.</p>
+        </div>
+      </div>
+
+      <!-- KPI framework -->
+      <div class="cs-section">
+        <p class="cs-section-label">KPI framework</p>
+        <ul>
+          <li><strong>North star: Revenue lift.</strong> Enriched attributes improve search relevance and filter coverage — both drive conversion.</li>
+          <li><strong>Attribute coverage.</strong> Filled / total possible attributes across the catalog. Tracks enrichment progress.</li>
+          <li><strong>High-confidence accuracy.</strong> % of filled attributes at ≥85% confidence. Quality signal, not just quantity.</li>
+          <li><strong>Pending review queue size.</strong> Medium-confidence attributes awaiting human verification. A leading indicator of data quality lag.</li>
+          <li><strong>Zero-result rate.</strong> Estimated % of filter combinations that return no products. Direct proxy for discovery failure.</li>
+          <li><strong>Facet engagement.</strong> % of sessions that use at least one filter. Enriched attributes expand filter options — more engagement means the data is working.</li>
+        </ul>
+      </div>
+
+      <!-- Key decisions -->
+      <div class="cs-section">
+        <p class="cs-section-label">Key design decisions</p>
+
+        <div class="decision-card">
+          <strong>Confidence as a first-class data field</strong>
+          <p>Every attribute carries a confidence score and a source label. A catalog-sourced value at 0.97 and an embedding-inferred value at 0.71 are treated differently — in the UI, in the review queue, and in the feedback loop. Confidence isn't metadata; it's part of the data model.</p>
+        </div>
+
+        <div class="decision-card">
+          <strong>Human-in-the-loop for medium confidence</strong>
+          <p>Attributes between 65–85% confidence don't auto-publish. They surface in a review queue where a merchant or data team can accept or reject. This threshold is configurable. High-confidence values (≥85%) publish automatically. Low-confidence (&lt;65%) go back for re-enrichment.</p>
+        </div>
+
+        <div class="decision-card">
+          <strong>Behavioral signals as a confidence update mechanism</strong>
+          <p>When a user searches "merino sweater" and clicks a product, that's a signal that the material attribute is accurate. When a "slim fit" filter surfaces a purchase, style confidence increases. The feedback loop closes the gap between what the catalog says and what customers confirm with their behavior.</p>
+        </div>
+
+        <div class="decision-card">
+          <strong>Source attribution on every attribute</strong>
+          <p>Each attribute value is labeled with its origin: catalog, ml_title, ml_description, ml_embedding, or behavioral. This matters for debugging, auditing, and understanding which enrichment sources are performing. A high-confidence ml_embedding value that keeps getting rejected in the queue is a signal the embedding model is failing on that attribute type.</p>
+        </div>
+      </div>
+
+      <!-- Learnings -->
+      <div class="cs-section">
+        <p class="cs-section-label">Learnings</p>
+        <ul>
+          <li>Confidence scoring changes everything downstream. Once every attribute has a confidence score, prioritization becomes obvious — review queues sort by confidence, facets can suppress low-confidence values, and the feedback loop has a clear signal to optimize.</li>
+          <li>The feedback loop is the defensible moat. ML enrichment is table stakes — any vendor can run attribute inference. A system that gets smarter from your specific customers' behavior is not replicable.</li>
+          <li>Zero-result rate is the most visceral KPI. It's easy to talk about "attribute coverage." It's harder to ignore "23% of filter combinations on this category return zero products."</li>
+          <li>Human review should be scoped narrowly. Routing everything to a human defeats the purpose. The right scope is medium confidence only — and even that queue should shrink as the feedback loop matures.</li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Scott Herford</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/james-herford-62110391/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/GeraltMagic" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
