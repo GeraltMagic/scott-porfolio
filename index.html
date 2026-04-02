@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Scott Herford — Product Manager</title>
+  <meta name="description" content="Product Manager with a builder's mindset. I write specs that ship and build prototypes to prove they work. AI/ML, data, and technical product." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -13,103 +14,290 @@
       <a href="index.html" class="nav-name">Scott Herford</a>
       <ul class="nav-links">
         <li><a href="#projects">Projects</a></li>
-        <li><a href="https://github.com/GeraltMagic" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="https://www.linkedin.com/in/james-herford-62110391/" target="_blank" rel="noopener" class="nav-cta">LinkedIn →</a></li>
       </ul>
     </div>
   </nav>
 
   <main>
+
+    <!-- Hero -->
     <section class="hero">
       <div class="container">
-        <h1>Product Manager.<br /><span>Builder.</span></h1>
-        <p>
-          I own roadmaps, write specs engineering can build from, and ship.
-          I also build — prototypes, analytics engines, AI tools — because the
-          best product thinking comes from understanding how things actually work.
+        <p class="hero-eyebrow">Product Manager · Builder</p>
+        <h1>I define what gets built.<br /><em>Then I build it.</em></h1>
+        <p class="hero-lead">
+          Most PMs write specs. I write specs <strong>and</strong> ship working prototypes —
+          AI tools, analytics engines, recommendation systems. I own roadmaps, align stakeholders,
+          run sprints, and go deep enough technically to catch what others miss.
         </p>
-        <div class="hero-meta">
-          <span class="tag">Product Management</span>
-          <span class="tag">AI / ML Systems</span>
-          <span class="tag">Data Analytics</span>
-          <span class="tag">Python · React</span>
+        <div class="hero-actions">
+          <a href="https://www.linkedin.com/in/james-herford-62110391/" target="_blank" rel="noopener" class="btn btn-primary">View LinkedIn</a>
+          <a href="#projects" class="btn btn-secondary">See projects ↓</a>
         </div>
       </div>
     </section>
 
-    <section class="projects" id="projects">
+    <hr class="divider" />
+
+    <!-- About -->
+    <section id="about">
       <div class="container">
-        <p class="section-title">Projects</p>
-        <div class="project-grid">
+        <p class="section-label">About</p>
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>
+              I'm a <strong>Product Manager</strong> who owns the roadmap end-to-end — prioritize features,
+              manage trade-offs, write PRDs that engineering can build from, and ship on time.
+            </p>
+            <p>
+              I also build. Not as a side project — as a deliberate practice. When I spec a recommendation
+              engine, I build one. When I define a data product, I run the analysis myself. That
+              cross-functional fluency makes me faster at scoping, better at spotting gaps in specs,
+              and more credible with engineering.
+            </p>
+            <p>
+              Day-to-day: I talk to users, synthesize feedback into actionable work, run sprint planning
+              and retros, and keep stakeholders — execs, design, engineering, GTM — aligned on what
+              matters and why.
+            </p>
+            <p>
+              Currently expanding into <strong>security and infrastructure</strong> — studying for
+              CompTIA Security+, working through Docker multi-container architecture, and reading
+              Snort 3 internals for network security fundamentals.
+            </p>
+          </div>
+          <div class="about-meta">
+            <div class="meta-block">
+              <h3>Product</h3>
+              <div class="tag-list">
+                <span class="tag">Roadmap ownership</span>
+                <span class="tag">PRD &amp; specs</span>
+                <span class="tag">Sprint planning</span>
+                <span class="tag">Stakeholder alignment</span>
+                <span class="tag">User research</span>
+                <span class="tag">Prioritization</span>
+                <span class="tag">Go-to-market</span>
+              </div>
+            </div>
+            <div class="meta-block">
+              <h3>Technical</h3>
+              <div class="tag-list">
+                <span class="tag tag-accent">Python</span>
+                <span class="tag tag-accent">React</span>
+                <span class="tag tag-accent">AI / ML systems</span>
+                <span class="tag tag-accent">MCP / Anthropic SDK</span>
+                <span class="tag tag-accent">Data analytics</span>
+                <span class="tag tag-accent">REST APIs</span>
+              </div>
+            </div>
+            <div class="meta-block">
+              <h3>In progress</h3>
+              <div class="tag-list">
+                <span class="tag tag-green">CompTIA Security+</span>
+                <span class="tag tag-green">Docker</span>
+                <span class="tag tag-green">Network security</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <hr class="divider" />
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="container">
+        <p class="section-label">Projects</p>
+        <div class="project-list">
+
+          <!-- AssortIQ -->
           <a href="projects/assortiq.html" class="card">
-            <div class="card-header">
-              <h2>AssortIQ</h2>
-              <span class="card-status">Complete</span>
+            <div class="card-top">
+              <h2>AssortIQ — AI Assortment Optimization</h2>
+              <span class="card-badge badge-complete">Complete</span>
             </div>
-            <p>
-              AI-powered assortment optimization for mid-market retail.
-              MCP server with 6 tools — demand forecasting, SKU embeddings,
-              store clustering, and add/drop/swap recommendations. Built the
-              full product definition and the technical implementation.
+            <p class="card-desc">
+              Full product definition and working technical implementation of an AI-powered
+              assortment platform for mid-market retail. Built the MCP server from scratch —
+              6 tools, 3 resources, demand forecasting with Chronos, SKU similarity via
+              embeddings, and store clustering. Designed to close the gap between enterprise
+              tools (Blue Yonder, RELEX) and the mid-market that can't afford them.
             </p>
-            <div class="card-stack">
-              <span class="stack-item">Python</span>
-              <span class="stack-item">FastMCP</span>
-              <span class="stack-item">Anthropic SDK</span>
-              <span class="stack-item">Chronos</span>
-              <span class="stack-item">sentence-transformers</span>
+            <ul class="card-highlights">
+              <li>Wrote the full product definition: problem, personas, V1 capabilities, data architecture, phasing, competitive positioning</li>
+              <li>Built the MCP server: forecast_demand, find_similar_items, cluster_stores, get_assortment_recommendations, get_category_health, search_skus</li>
+              <li>Zero-shot forecasting with Chronos-Bolt handles cold-start SKUs without historical data</li>
+            </ul>
+            <div class="card-footer">
+              <div class="stack-list">
+                <span class="stack-tag">Python</span>
+                <span class="stack-tag">FastMCP</span>
+                <span class="stack-tag">Anthropic SDK</span>
+                <span class="stack-tag">Chronos</span>
+                <span class="stack-tag">sentence-transformers</span>
+              </div>
+              <span class="card-link">Full case study →</span>
             </div>
-            <span class="card-arrow">View case study →</span>
           </a>
 
+          <!-- WeatherWear -->
           <a href="projects/weatherwear.html" class="card">
-            <div class="card-header">
-              <h2>WeatherWear</h2>
-              <span class="card-status">Complete prototype</span>
+            <div class="card-top">
+              <h2>WeatherWear — Personalized Recommendation Engine</h2>
+              <span class="card-badge badge-prototype">Prototype</span>
             </div>
-            <p>
-              Personalized clothing recommendation engine. Six environmental
-              signals, dynamic feature weighting with a 30% bias cap,
-              explainable scoring per item, and a feedback loop that produces
-              structured training data. 67-item catalog. Zero external dependencies.
+            <p class="card-desc">
+              Personalized clothing recommendation engine built in a single React file.
+              Six normalized environmental signals, dynamic feature weighting with a 30% bias cap,
+              explainable scoring on every recommendation, and a live feedback loop that
+              tracks precision/recall/F1 and exports structured training data as JSON.
+              Works offline — no API key, no backend.
             </p>
-            <div class="card-stack">
-              <span class="stack-item">React</span>
-              <span class="stack-item">JSX</span>
-              <span class="stack-item">Lucide</span>
+            <ul class="card-highlights">
+              <li>Feature weighting engine with iterative redistribution — no single signal dominates</li>
+              <li>Explainability built in: score breakdown, color-coded contribution bar, top driving factor per item</li>
+              <li>Feedback system exports labeled training records — architectured for model iteration from day one</li>
+            </ul>
+            <div class="card-footer">
+              <div class="stack-list">
+                <span class="stack-tag">React</span>
+                <span class="stack-tag">JSX</span>
+                <span class="stack-tag">Lucide</span>
+              </div>
+              <span class="card-link">Full case study →</span>
             </div>
-            <span class="card-arrow">View case study →</span>
           </a>
 
+          <!-- Royals Dashboard -->
           <a href="projects/royals.html" class="card">
-            <div class="card-header">
+            <div class="card-top">
               <h2>Royals Player Insights Dashboard</h2>
-              <span class="card-status">Complete</span>
+              <span class="card-badge badge-complete">Complete</span>
             </div>
-            <p>
-              Local analytics engine for KC Royals player analysis.
-              Forecasting, feature importance, partial dependence plots, causal
-              inference, and anomaly detection — all from a single CLI command.
-              Goes past "what happened" to "what drives performance."
+            <p class="card-desc">
+              Local analytics engine for KC Royals player analysis. One CLI command returns
+              SARIMAX forecasting, feature importance rankings, partial dependence plots,
+              causal inference estimates, and anomaly detection. Synthetic data fallback makes
+              it CI-friendly. Goes past "what happened" to "what drives performance."
             </p>
-            <div class="card-stack">
-              <span class="stack-item">Python</span>
-              <span class="stack-item">pandas</span>
-              <span class="stack-item">statsmodels</span>
-              <span class="stack-item">DoWhy</span>
-              <span class="stack-item">pybaseball</span>
+            <ul class="card-highlights">
+              <li>Causal inference via DoWhy/EconML — separates correlation from causation in performance data</li>
+              <li>Graceful degradation: EWMA fallback, no-Streamlit mode, synthetic data — works in any environment</li>
+              <li>CLI-first design: automatable, scriptable, no UI dependency</li>
+            </ul>
+            <div class="card-footer">
+              <div class="stack-list">
+                <span class="stack-tag">Python</span>
+                <span class="stack-tag">pandas</span>
+                <span class="stack-tag">statsmodels</span>
+                <span class="stack-tag">DoWhy</span>
+                <span class="stack-tag">pybaseball</span>
+              </div>
+              <span class="card-link">Full case study →</span>
             </div>
-            <span class="card-arrow">View case study →</span>
           </a>
 
         </div>
       </div>
     </section>
+
+    <hr class="divider" />
+
+    <!-- Skills -->
+    <section id="skills">
+      <div class="container">
+        <p class="section-label">Skills</p>
+        <div class="skills-grid">
+
+          <div class="skill-block">
+            <h3>Product Management</h3>
+            <div class="skill-items">
+              <div class="skill-item"><strong>Roadmap &amp; prioritization</strong> — feature scoping, trade-off management, OKR alignment</div>
+              <div class="skill-item"><strong>Specs &amp; PRDs</strong> — writing product definitions engineering can build from, no ambiguity</div>
+              <div class="skill-item"><strong>Agile delivery</strong> — sprint planning, standups, retros, release coordination</div>
+              <div class="skill-item"><strong>User research</strong> — synthesizing feedback, turning qualitative input into actionable work</div>
+              <div class="skill-item"><strong>Stakeholder alignment</strong> — execs, design, engineering, GTM — keeping everyone on the same page</div>
+              <div class="skill-item"><strong>Go-to-market</strong> — phasing, launch sequencing, positioning against competitive alternatives</div>
+            </div>
+          </div>
+
+          <div class="skill-block">
+            <h3>Technical</h3>
+            <div class="skill-items">
+              <div class="skill-item"><strong>Python</strong> — pandas, numpy, statsmodels, matplotlib, DoWhy, EconML, FastMCP</div>
+              <div class="skill-item"><strong>React</strong> — functional components, hooks, single-file apps, offline-first architecture</div>
+              <div class="skill-item"><strong>AI / ML systems</strong> — MCP servers, Anthropic SDK, zero-shot forecasting, embedding models, recommendation engines</div>
+              <div class="skill-item"><strong>Data analytics</strong> — forecasting (SARIMAX, EWMA), feature importance, causal inference, anomaly detection</div>
+              <div class="skill-item"><strong>APIs</strong> — REST, MCP protocol, OpenAI Responses API, multi-provider integration</div>
+              <div class="skill-item"><strong>Infrastructure</strong> — Docker, multi-container architecture, CI/CD fundamentals</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Currently Learning -->
+    <section>
+      <div class="container">
+        <p class="section-label">Currently learning</p>
+        <div class="learning-grid">
+
+          <div class="learn-card">
+            <span class="learn-status">In progress</span>
+            <h3>CompTIA Security+</h3>
+            <p>Structured certification prep. Network security fundamentals, threat detection, access control, cryptography.</p>
+          </div>
+
+          <div class="learn-card">
+            <span class="learn-status">In progress</span>
+            <h3>Docker &amp; Containers</h3>
+            <p>Multi-container architecture with Compose, Dockerfile builds, service networking, volume management.</p>
+          </div>
+
+          <div class="learn-card">
+            <span class="learn-status">In progress</span>
+            <h3>Snort 3 / Network IDS</h3>
+            <p>Reading Cisco's open-source IDS/IPS source. Rule engines, DAQ layer, traffic analysis pipelines.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Contact -->
+    <section>
+      <div class="container">
+        <div class="contact-block">
+          <div>
+            <h2>Open to new roles</h2>
+            <p>PM roles in AI, data, or technical product. I bring product thinking and the technical depth to back it up.</p>
+          </div>
+          <div class="contact-links">
+            <a href="https://www.linkedin.com/in/james-herford-62110391/" target="_blank" rel="noopener" class="btn btn-primary">LinkedIn</a>
+            <a href="https://github.com/GeraltMagic" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer>
     <div class="container">
-      <p>Scott Herford &mdash; <a href="https://github.com/GeraltMagic/scott-portfolio" target="_blank" rel="noopener">GitHub</a></p>
+      <p>Scott Herford</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/james-herford-62110391/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/GeraltMagic" target="_blank" rel="noopener">GitHub</a>
+      </div>
     </div>
   </footer>
 
