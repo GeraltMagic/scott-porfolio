@@ -627,6 +627,35 @@ code {
   border-radius: 3px;
 }
 
+/* ── Screen frames (design previews) ── */
+.screen-frame {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 16px rgba(0,0,0,.25);
+}
+.screen-label {
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.screen-desc {
+  color: var(--muted2);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 640px;
+}
+.screen-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 28px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
 /* ── Responsive ── */
 @media (max-width: 680px) {
   .hero h1 { font-size: 2.1rem; }

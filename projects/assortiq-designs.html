@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AssortIQ — Product Designs</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet" />
+  <style>
+    .screen-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 48px 28px 100px;
+      display: flex;
+      flex-direction: column;
+      gap: 64px;
+    }
+    .screen-section { display: flex; flex-direction: column; gap: 12px; }
+    .screen-label {
+      font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .screen-desc {
+      color: var(--muted2);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      max-width: 640px;
+    }
+    .screen-frame {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 16px rgba(0,0,0,.25);
+    }
+    .screen-frame > div {
+      transform-origin: top left;
+    }
+    .aiq-screen {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 12px;
+      line-height: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-synthesis: none;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    .aiq-screen *, .aiq-screen *::before, .aiq-screen *::after { box-sizing: border-box; }
+    .designs-intro {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 48px 28px 0;
+    }
+    .designs-intro h1 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .designs-intro p {
+      color: var(--muted2);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      max-width: 640px;
+    }
+    @media (max-width: 680px) {
+      .screen-frame { border-radius: 6px; }
+      .screen-grid { padding: 32px 16px 80px; gap: 48px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="cs-nav">
+    <div class="container">
+      <a href="../index.html" class="cs-back">← Back to portfolio</a>
+      <div style="display:flex;gap:10px;">
+        <a href="assortiq.html" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.825rem;">Case Study</a>
+        <a href="https://www.linkedin.com/in/james-herford-62110391/" target="_blank" rel="noopener" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.825rem;">LinkedIn</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="designs-intro">
+      <h1>AssortIQ — Product Design</h1>
+      <p>Four connected surfaces showing the future-state product — from executive dashboard to AI copilot to scenario simulation to governance approval. Each screen is designed at 1440px for desktop.</p>
+    </div>
+
+    <div class="screen-grid">
+
+      <!-- ═══ Screen 1: Executive Overview ═══ -->
+      <div class="screen-section">
+        <p class="screen-label">01 / Executive Overview</p>
+        <p class="screen-desc">The VP's dashboard — trailing KPIs, risk signals, and recommended actions in one view. No drilling required for the daily check-in.</p>
+        <div class="screen-frame">
+          <div class="aiq-screen" style="background-color:#FAFAF9;display:flex;flex-direction:column;width:100%;aspect-ratio:1440/900;">
+            <!-- Top nav -->
+            <div style="align-items:center;background-color:#FFFFFF;border-bottom:1px solid #E8E7E3;display:flex;flex-shrink:0;height:56px;justify-content:space-between;padding:0 32px;">
+              <div style="align-items:center;display:flex;gap:8px;">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="8" height="8" rx="2" fill="#2D7A4F"/><rect x="11" y="1" width="8" height="8" rx="2" fill="#2D7A4F" opacity="0.5"/><rect x="1" y="11" width="8" height="8" rx="2" fill="#2D7A4F" opacity="0.5"/><rect x="11" y="11" width="8" height="8" rx="2" fill="#2D7A4F" opacity="0.25"/></svg>
+                <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:16px;font-weight:700;letter-spacing:-0.02em;line-height:20px;">AssortIQ</div>
+              </div>
+              <div style="align-items:center;display:flex;gap:24px;">
+                <div style="align-items:center;border:1px solid #E8E7E3;border-radius:6px;display:flex;gap:8px;padding:6px 12px;">
+                  <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;line-height:16px;">Mar 1 – Mar 28, 2026</div>
+                </div>
+                <div style="align-items:center;background-color:#E8E7E3;border-radius:50%;display:flex;flex-shrink:0;height:32px;justify-content:center;width:32px;">
+                  <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:600;line-height:16px;">JM</div>
+                </div>
+              </div>
+            </div>
+            <!-- Body -->
+            <div style="display:flex;flex:1;gap:24px;padding:24px 32px;">
+              <!-- Left col: KPI cards -->
+              <div style="display:flex;flex:6;flex-direction:column;gap:16px;">
+                <!-- Sales Lift -->
+                <div style="background-color:#FFFFFF;border:1px solid #E8E7E3;border-radius:10px;display:flex;flex-direction:column;gap:12px;padding:20px;">
+                  <div style="display:flex;justify-content:space-between;align-items:center;">
+                    <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;line-height:16px;text-transform:uppercase;">Sales Lift — 12 Week Trailing</div>
+                    <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;line-height:16px;">vs. baseline</div>
+                  </div>
+                  <div style="display:flex;align-items:baseline;gap:8px;">
+                    <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:28px;font-weight:700;letter-spacing:-0.02em;line-height:34px;">+4.2%</div>
+                    <div style="color:#2D7A4F;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:500;line-height:18px;">+0.6pp vs prior period</div>
+                  </div>
+                  <svg width="100%" height="48" viewBox="0 0 720 48" fill="none" preserveAspectRatio="none"><path d="M0 40 C60 38 90 35 120 30 C150 26 180 28 210 24 C240 20 270 22 300 18 C330 16 360 20 390 16 C420 12 450 14 480 10 C510 8 540 12 570 8 C600 6 630 10 660 6 C680 4 700 3 720 2" stroke="#2D7A4F" stroke-width="2" fill="none"/><path d="M0 40 C60 38 90 35 120 30 C150 26 180 28 210 24 C240 20 270 22 300 18 C330 16 360 20 390 16 C420 12 450 14 480 10 C510 8 540 12 570 8 C600 6 630 10 660 6 C680 4 700 3 720 2 L720 48 L0 48 Z" fill="#2D7A4F" opacity="0.06"/></svg>
+                </div>
+                <!-- Gross Margin -->
+                <div style="background-color:#FFFFFF;border:1px solid #E8E7E3;border-radius:10px;display:flex;flex-direction:column;gap:12px;padding:20px;">
+                  <div style="display:flex;justify-content:space-between;align-items:center;">
+                    <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;line-height:16px;text-transform:uppercase;">Gross Margin — 12 Week Trailing</div>
+                    <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;line-height:16px;">category avg</div>
+                  </div>
+                  <div style="display:flex;align-items:baseline;gap:8px;">
+                    <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:28px;font-weight:700;letter-spacing:-0.02em;line-height:34px;">34.1%</div>
+                    <div style="color:#2D7A4F;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:500;line-height:18px;">+1.2pp YoY</div>
+                  </div>
+                  <svg width="100%" height="48" viewBox="0 0 720 48" fill="none" preserveAspectRatio="none"><path d="M0 36 C60 34 90 30 120 32 C150 28 180 26 210 28 C240 24 270 20 300 22 C330 18 360 16 390 18 C420 14 450 12 480 14 C510 10 540 12 570 8 C600 10 630 6 660 8 C680 6 700 4 720 4" stroke="#3B6FC0" stroke-width="2" fill="none"/><path d="M0 36 C60 34 90 30 120 32 C150 28 180 26 210 28 C240 24 270 20 300 22 C330 18 360 16 390 18 C420 14 450 12 480 14 C510 10 540 12 570 8 C600 10 630 6 660 8 C680 6 700 4 720 4 L720 48 L0 48 Z" fill="#3B6FC0" opacity="0.06"/></svg>
+                </div>
+                <!-- On-Shelf Availability -->
+                <div style="background-color:#FFFFFF;border:1px solid #E8E7E3;border-radius:10px;display:flex;flex-direction:column;gap:12px;padding:20px;">
+                  <div style="display:flex;justify-content:space-between;align-items:center;">
+                    <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;line-height:16px;text-transform:uppercase;">On-Shelf Availability</div>
+                    <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;line-height:16px;">target: 96.0%</div>
+                  </div>
+                  <div style="display:flex;align-items:baseline;gap:8px;">
+                    <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:28px;font-weight:700;letter-spacing:-0.02em;line-height:34px;">97.3%</div>
+                    <div style="color:#2D7A4F;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:500;line-height:18px;">Above target</div>
+                  </div>
+                  <div style="display:flex;flex-direction:column;gap:6px;">
+                    <div style="background-color:#E8E7E3;border-radius:4px;display:flex;height:8px;overflow:hidden;">
+                      <div style="background-color:#2D7A4F;border-radius:4px;width:97.3%;"></div>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;">
+                      <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:11px;line-height:14px;">0%</div>
+                      <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:11px;line-height:14px;">100%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Right col: Risk, Opportunities, Actions -->
+              <div style="display:flex;flex:4;flex-direction:column;gap:16px;">
+                <!-- Risk Summary -->
+                <div style="display:flex;flex-direction:column;gap:8px;">
+                  <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:18px;font-weight:600;line-height:22px;">Risk Summary</div>
+                  <div style="align-items:center;background-color:#FFFFFF;border:1px solid #E8E7E3;border-radius:10px;display:flex;gap:12px;padding:16px;">
+                    <div style="align-items:center;background-color:#C8412B14;border-radius:8px;display:flex;flex-shrink:0;height:36px;justify-content:center;width:36px;">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1.5L16.5 15H1.5L9 1.5Z" stroke="#C8412B" stroke-width="1.5" fill="none"/><line x1="9" y1="7" x2="9" y2="10.5" stroke="#C8412B" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="12.5" r="0.75" fill="#C8412B"/></svg>
+                    </div>
+                    <div style="display:flex;flex:1;flex-direction:column;gap:2px;">
+                      <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:500;line-height:18px;">Over-Assortment Risk</div>
+                      <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;line-height:16px;">7 categories flagged for SKU bloat</div>
+                    </div>
+                    <div style="color:#C8412B;font-family:'DM Sans',system-ui,sans-serif;font-size:20px;font-weight:700;line-height:24px;">7</div>
+                  </div>
+                  <div style="align-items:center;background-color:#FFFFFF;border:1px solid #E8E7E3;border-radius:10px;display:flex;gap:12px;padding:16px;">
+                    <div style="align-items:center;background-color:#8B735514;border-radius:8px;display:flex;flex-shrink:0;height:36px;justify-content:center;width:36px;">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="#8B7355" stroke-width="1.5" fill="none"/><line x1="9" y1="6" x2="9" y2="10" stroke="#8B7355" stroke-width="1.5" stroke-linecap="round"/><line x1="7" y1="10" x2="11" y2="10" stroke="#8B7355" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <div style="display:flex;flex:1;flex-direction:column;gap:2px;">
+                      <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:500;line-height:18px;">Under-Assortment Gaps</div>
+                      <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;line-height:16px;">3 regions with unmet demand signals</div>
+                    </div>
+                    <div style="color:#8B7355;font-family:'DM Sans',system-ui,sans-serif;font-size:20px;font-weight:700;line-height:24px;">3</div>
+                  </div>
+                </div>
+                <!-- Top Opportunities -->
+                <div style="display:flex;flex-direction:column;gap:8px;">
+                  <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:18px;font-weight:600;line-height:22px;">Top Opportunities</div>
+                  <div style="background-color:#FFFFFF;border:1px solid #E8E7E3;border-radius:10px;display:flex;flex-direction:column;overflow:hidden;">
+                    <div style="align-items:center;border-bottom:1px solid #E8E7E3;display:flex;gap:12px;padding:12px 16px;">
+                      <div style="display:flex;flex:1;flex-direction:column;gap:2px;"><div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:500;line-height:18px;">Snacks &amp; Confectionery</div><div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;line-height:16px;">Southeast</div></div>
+                      <div style="color:#2D7A4F;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:600;line-height:18px;">+3.8% lift</div>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="#9C9B95" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <div style="align-items:center;border-bottom:1px solid #E8E7E3;display:flex;gap:12px;padding:12px 16px;">
+                      <div style="display:flex;flex:1;flex-direction:column;gap:2px;"><div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:500;line-height:18px;">Beverages — Sparkling</div><div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;line-height:16px;">Midwest</div></div>
+                      <div style="color:#2D7A4F;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:600;line-height:18px;">+2.4% lift</div>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="#9C9B95" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <div style="align-items:center;border-bottom:1px solid #E8E7E3;display:flex;gap:12px;padding:12px 16px;">
+                      <div style="display:flex;flex:1;flex-direction:column;gap:2px;"><div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:500;line-height:18px;">Frozen Meals</div><div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;line-height:16px;">West Coast</div></div>
+                      <div style="color:#2D7A4F;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:600;line-height:18px;">+1.9% lift</div>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="#9C9B95" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <div style="align-items:center;display:flex;gap:12px;padding:12px 16px;">
+                      <div style="display:flex;flex:1;flex-direction:column;gap:2px;"><div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:500;line-height:18px;">Dairy — Yogurt</div><div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;line-height:16px;">Northeast</div></div>
+                      <div style="color:#2D7A4F;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:600;line-height:18px;">+1.5% lift</div>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="#9C9B95" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </div>
+                  </div>
+                </div>
+                <!-- Recommended Actions -->
+                <div style="display:flex;flex-direction:column;gap:8px;">
+                  <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:18px;font-weight:600;line-height:22px;">Recommended Actions</div>
+                  <div style="background-color:#FFFFFF;border:1px solid #E8E7E3;border-radius:10px;display:flex;flex-direction:column;overflow:hidden;">
+                    <div style="align-items:flex-start;border-bottom:1px solid #E8E7E3;display:flex;gap:10px;padding:12px 16px;">
+                      <div style="background-color:#C8412B;border-radius:50%;flex-shrink:0;height:8px;width:8px;position:relative;top:5px;"></div>
+                      <div style="display:flex;flex-direction:column;gap:2px;"><div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:500;line-height:18px;">Review Snacks rationalization scenario</div><div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;line-height:16px;">12 SKUs flagged — simulation ready</div></div>
+                    </div>
+                    <div style="align-items:flex-start;border-bottom:1px solid #E8E7E3;display:flex;gap:10px;padding:12px 16px;">
+                      <div style="background-color:#8B7355;border-radius:50%;flex-shrink:0;height:8px;width:8px;position:relative;top:5px;"></div>
+                      <div style="display:flex;flex-direction:column;gap:2px;"><div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:500;line-height:18px;">Approve Midwest beverage expansion</div><div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;line-height:16px;">Pending Category Director sign-off</div></div>
+                    </div>
+                    <div style="align-items:flex-start;display:flex;gap:10px;padding:12px 16px;">
+                      <div style="background-color:#3B6FC0;border-radius:50%;flex-shrink:0;height:8px;width:8px;position:relative;top:5px;"></div>
+                      <div style="display:flex;flex-direction:column;gap:2px;"><div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:500;line-height:18px;">Investigate frozen meals velocity drop</div><div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;line-height:16px;">-8% velocity in 3 West Coast clusters</div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ Screen 2: Assortment Copilot ═══ -->
+      <div class="screen-section">
+        <p class="screen-label">02 / Assortment Copilot</p>
+        <p class="screen-desc">Conversational AI copilot paired with a live SKU table. The category manager asks a question; the copilot surfaces data and proposes tradeoffs inline.</p>
+        <div class="screen-frame">
+          <div class="aiq-screen" style="background-color:#FAFAF9;display:flex;flex-direction:column;width:100%;aspect-ratio:1440/900;">
+            <!-- Top nav -->
+            <div style="align-items:center;background-color:#FFFFFF;border-bottom:1px solid #E8E7E3;display:flex;flex-shrink:0;height:56px;justify-content:space-between;padding:0 32px;">
+              <div style="align-items:center;display:flex;gap:8px;">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="8" height="8" rx="2" fill="#2D7A4F"/><rect x="11" y="1" width="8" height="8" rx="2" fill="#2D7A4F" opacity="0.5"/><rect x="1" y="11" width="8" height="8" rx="2" fill="#2D7A4F" opacity="0.5"/><rect x="11" y="11" width="8" height="8" rx="2" fill="#2D7A4F" opacity="0.25"/></svg>
+                <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:16px;font-weight:700;letter-spacing:-0.02em;line-height:20px;">AssortIQ</div>
+              </div>
+              <div style="align-items:center;display:flex;gap:20px;">
+                <div style="color:#3B6FC0;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;font-weight:500;line-height:16px;">Copilot</div>
+                <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;line-height:16px;">Scenarios</div>
+                <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;line-height:16px;">Approvals</div>
+                <div style="align-items:center;background-color:#E8E7E3;border-radius:50%;display:flex;flex-shrink:0;height:32px;justify-content:center;width:32px;"><div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:600;line-height:16px;">JM</div></div>
+              </div>
+            </div>
+            <!-- Body -->
+            <div style="display:flex;flex:1;">
+              <!-- Left: Category data -->
+              <div style="border-right:1px solid #E8E7E3;display:flex;flex-direction:column;gap:20px;padding:24px 28px;width:60%;">
+                <div style="display:flex;flex-direction:column;gap:16px;">
+                  <div style="display:flex;align-items:center;gap:8px;">
+                    <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;line-height:16px;text-transform:uppercase;">Category</div>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4 5l2 2 2-2" stroke="#9C9B95" stroke-width="1.2" stroke-linecap="round"/></svg>
+                  </div>
+                  <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:28px;font-weight:700;letter-spacing:-0.02em;line-height:34px;">Snacks &amp; Confectionery</div>
+                </div>
+                <div style="display:flex;gap:16px;">
+                  <div style="display:flex;flex-direction:column;gap:4px;"><div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;line-height:16px;text-transform:uppercase;">SKUs</div><div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:20px;font-weight:700;line-height:24px;">148</div></div>
+                  <div style="background-color:#E8E7E3;width:1px;flex-shrink:0;"></div>
+                  <div style="display:flex;flex-direction:column;gap:4px;"><div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;line-height:16px;text-transform:uppercase;">Revenue</div><div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:20px;font-weight:700;line-height:24px;">$14.2M</div></div>
+                  <div style="background-color:#E8E7E3;width:1px;flex-shrink:0;"></div>
+                  <div style="display:flex;flex-direction:column;gap:4px;"><div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;line-height:16px;text-transform:uppercase;">Margin</div><div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:20px;font-weight:700;line-height:24px;">31.4%</div></div>
+                  <div style="background-color:#E8E7E3;width:1px;flex-shrink:0;"></div>
+                  <div style="display:flex;flex-direction:column;gap:4px;"><div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;line-height:16px;text-transform:uppercase;">Avg Velocity</div><div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:20px;font-weight:700;line-height:24px;">24.6/wk</div></div>
+                </div>
+                <!-- SKU Table -->
+                <div style="background-color:#FFFFFF;border:1px solid #E8E7E3;border-radius:10px;display:flex;flex-direction:column;overflow:hidden;">
+                  <div style="align-items:center;background-color:#FAFAF9;border-bottom:1px solid #E8E7E3;display:flex;padding:10px 16px;">
+                    <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;line-height:16px;text-transform:uppercase;flex:3;">SKU Name</div>
+                    <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;line-height:16px;text-transform:uppercase;flex:1;text-align:right;">Sales</div>
+                    <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;line-height:16px;text-transform:uppercase;flex:1;text-align:right;">Margin</div>
+                    <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;line-height:16px;text-transform:uppercase;flex-shrink:0;text-align:right;width:60px;">Trend</div>
+                  </div>
+                  <div style="align-items:center;border-bottom:1px solid #E8E7E3;display:flex;padding:10px 16px;">
+                    <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;flex:3;">Lay's Classic 10oz</div>
+                    <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;flex:1;text-align:right;">$1.8M</div>
+                    <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;flex:1;text-align:right;">34.2%</div>
+                    <div style="flex-shrink:0;width:60px;display:flex;justify-content:flex-end;"><svg width="20" height="14" viewBox="0 0 20 14"><path d="M2 10 L7 6 L12 8 L18 3" stroke="#2D7A4F" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div>
+                  </div>
+                  <div style="align-items:center;border-bottom:1px solid #E8E7E3;display:flex;padding:10px 16px;">
+                    <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;flex:3;">Doritos Nacho 9.25oz</div>
+                    <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;flex:1;text-align:right;">$1.4M</div>
+                    <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;flex:1;text-align:right;">32.1%</div>
+                    <div style="flex-shrink:0;width:60px;display:flex;justify-content:flex-end;"><svg width="20" height="14" viewBox="0 0 20 14"><path d="M2 10 L7 7 L12 8 L18 4" stroke="#2D7A4F" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div>
+                  </div>
+                  <div style="align-items:center;border-bottom:1px solid #E8E7E3;display:flex;padding:10px 16px;">
+                    <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;flex:3;">Snickers Bar 1.86oz</div>
+                    <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;flex:1;text-align:right;">$980K</div>
+                    <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;flex:1;text-align:right;">38.5%</div>
+                    <div style="flex-shrink:0;width:60px;display:flex;justify-content:flex-end;"><svg width="20" height="14" viewBox="0 0 20 14"><path d="M2 7 L7 6 L12 7 L18 6" stroke="#9C9B95" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div>
+                  </div>
+                  <div style="align-items:center;border-bottom:1px solid #E8E7E3;display:flex;padding:10px 16px;">
+                    <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;flex:3;">Pringles Original 5.5oz</div>
+                    <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;flex:1;text-align:right;">$620K</div>
+                    <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;flex:1;text-align:right;">29.8%</div>
+                    <div style="flex-shrink:0;width:60px;display:flex;justify-content:flex-end;"><svg width="20" height="14" viewBox="0 0 20 14"><path d="M2 5 L7 7 L12 9 L18 11" stroke="#C8412B" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div>
+                  </div>
+                  <div style="align-items:center;border-bottom:1px solid #E8E7E3;display:flex;padding:10px 16px;">
+                    <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;flex:3;">Kettle Brand Sea Salt 8oz</div>
+                    <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;flex:1;text-align:right;">$210K</div>
+                    <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;flex:1;text-align:right;">26.1%</div>
+                    <div style="flex-shrink:0;width:60px;display:flex;justify-content:flex-end;"><svg width="20" height="14" viewBox="0 0 20 14"><path d="M2 4 L7 6 L12 9 L18 12" stroke="#C8412B" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div>
+                  </div>
+                  <div style="align-items:center;display:flex;padding:10px 16px;">
+                    <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;flex:3;">Private Label Trail Mix 12oz</div>
+                    <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;flex:1;text-align:right;">$145K</div>
+                    <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;flex:1;text-align:right;">22.3%</div>
+                    <div style="flex-shrink:0;width:60px;display:flex;justify-content:flex-end;"><svg width="20" height="14" viewBox="0 0 20 14"><path d="M2 5 L7 8 L12 10 L18 12" stroke="#C8412B" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Right: Copilot chat -->
+              <div style="background-color:#FFFFFF;display:flex;flex-direction:column;width:40%;">
+                <div style="align-items:center;border-bottom:1px solid #E8E7E3;display:flex;flex-shrink:0;gap:8px;padding:20px 24px 16px;">
+                  <div style="background-color:#2D7A4F;border-radius:50%;flex-shrink:0;height:8px;width:8px;"></div>
+                  <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:18px;font-weight:600;line-height:22px;">Copilot</div>
+                </div>
+                <div style="display:flex;flex:1;flex-direction:column;gap:14px;overflow:hidden;padding:16px 20px;">
+                  <!-- User message -->
+                  <div style="display:flex;justify-content:flex-end;">
+                    <div style="background-color:#F0F0EE;border-radius:12px 12px 2px 12px;max-width:85%;padding:10px 14px;">
+                      <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;">This category feels bloated. Too many low-performers dragging us down.</div>
+                    </div>
+                  </div>
+                  <!-- Copilot response -->
+                  <div style="display:flex;flex-direction:column;gap:8px;">
+                    <div style="background-color:#F7FAF8;border:1px solid #D4E8DC;border-radius:12px 12px 12px 2px;max-width:90%;padding:10px 14px;">
+                      <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:150%;">I found 12 SKUs with velocity below 5 units/week and declining margin. Together they represent only 3.2% of revenue but 8.1% of shelf complexity. Rationalizing them could simplify operations with minimal sales risk.</div>
+                    </div>
+                  </div>
+                  <!-- User message 2 -->
+                  <div style="display:flex;justify-content:flex-end;">
+                    <div style="background-color:#F0F0EE;border-radius:12px 12px 2px 12px;max-width:85%;padding:10px 14px;">
+                      <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;">Show me the best tradeoff between revenue retention and simplicity.</div>
+                    </div>
+                  </div>
+                  <!-- Copilot response 2 with data cards -->
+                  <div style="display:flex;flex-direction:column;gap:10px;">
+                    <div style="background-color:#F7FAF8;border:1px solid #D4E8DC;border-radius:12px 12px 12px 2px;display:flex;flex-direction:column;gap:8px;max-width:90%;padding:10px 14px;">
+                      <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:150%;">Here's the sweet spot — removing 12 SKUs gives you:</div>
+                      <div style="display:flex;gap:12px;">
+                        <div style="background-color:#FFFFFF;border-radius:6px;display:flex;flex:1;flex-direction:column;gap:2px;padding:8px 12px;">
+                          <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:11px;font-weight:500;letter-spacing:0.06em;line-height:14px;text-transform:uppercase;">Revenue</div>
+                          <div style="color:#C8412B;font-family:'DM Sans',system-ui,sans-serif;font-size:16px;font-weight:700;line-height:20px;">-2.1%</div>
+                        </div>
+                        <div style="background-color:#FFFFFF;border-radius:6px;display:flex;flex:1;flex-direction:column;gap:2px;padding:8px 12px;">
+                          <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:11px;font-weight:500;letter-spacing:0.06em;line-height:14px;text-transform:uppercase;">Margin</div>
+                          <div style="color:#2D7A4F;font-family:'DM Sans',system-ui,sans-serif;font-size:16px;font-weight:700;line-height:20px;">+1.4%</div>
+                        </div>
+                        <div style="background-color:#FFFFFF;border-radius:6px;display:flex;flex:1;flex-direction:column;gap:2px;padding:8px 12px;">
+                          <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:11px;font-weight:500;letter-spacing:0.06em;line-height:14px;text-transform:uppercase;">SKUs</div>
+                          <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:16px;font-weight:700;line-height:20px;">136</div>
+                        </div>
+                      </div>
+                      <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;line-height:16px;">Want me to build a scenario so you can simulate this?</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Input bar -->
+                <div style="align-items:center;border-top:1px solid #E8E7E3;display:flex;flex-shrink:0;gap:8px;padding:16px 24px;">
+                  <div style="align-items:center;background-color:#FAFAF9;border:1px solid #E8E7E3;border-radius:8px;display:flex;flex:1;padding:10px 14px;">
+                    <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;">Ask about this assortment...</div>
+                  </div>
+                  <div style="align-items:center;background-color:#2D7A4F;border-radius:8px;display:flex;flex-shrink:0;height:36px;justify-content:center;width:36px;">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ Screen 3: Scenario Workspace ═══ -->
+      <div class="screen-section">
+        <p class="screen-label">03 / Scenario Workspace</p>
+        <p class="screen-desc">Side-by-side current vs. proposed assortment with SKU-level add/remove controls. Impact metrics update live as the user adjusts the mix.</p>
+        <div class="screen-frame">
+          <div class="aiq-screen" style="background-color:#FAFAF9;display:flex;flex-direction:column;width:100%;aspect-ratio:1440/900;">
+            <!-- Top nav -->
+            <div style="align-items:center;background-color:#FFFFFF;border-bottom:1px solid #E8E7E3;display:flex;flex-shrink:0;height:56px;justify-content:space-between;padding:0 32px;">
+              <div style="align-items:center;display:flex;gap:8px;">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="8" height="8" rx="2" fill="#2D7A4F"/><rect x="11" y="1" width="8" height="8" rx="2" fill="#2D7A4F" opacity="0.5"/><rect x="1" y="11" width="8" height="8" rx="2" fill="#2D7A4F" opacity="0.5"/><rect x="11" y="11" width="8" height="8" rx="2" fill="#2D7A4F" opacity="0.25"/></svg>
+                <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:16px;font-weight:700;letter-spacing:-0.02em;line-height:20px;">AssortIQ</div>
+              </div>
+              <div style="align-items:center;display:flex;gap:20px;">
+                <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;line-height:16px;">Copilot</div>
+                <div style="color:#3B6FC0;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;font-weight:500;line-height:16px;">Scenarios</div>
+                <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;line-height:16px;">Approvals</div>
+                <div style="align-items:center;background-color:#E8E7E3;border-radius:50%;display:flex;flex-shrink:0;height:32px;justify-content:center;width:32px;"><div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:600;line-height:16px;">JM</div></div>
+              </div>
+            </div>
+            <!-- Scenario header -->
+            <div style="align-items:center;background-color:#FFFFFF;border-bottom:1px solid #E8E7E3;display:flex;flex-shrink:0;justify-content:space-between;padding:16px 32px;">
+              <div style="align-items:center;display:flex;gap:12px;">
+                <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:18px;font-weight:600;line-height:22px;">Southeast Snacks Rationalization</div>
+                <div style="background-color:#8B73551A;border-radius:4px;padding:4px 10px;"><div style="color:#8B7355;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;line-height:16px;text-transform:uppercase;">Draft</div></div>
+              </div>
+              <div style="align-items:center;display:flex;gap:8px;">
+                <div style="border:1px solid #E8E7E3;border-radius:6px;padding:8px 16px;"><div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;font-weight:500;line-height:16px;">Compare</div></div>
+                <div style="border:1px solid #E8E7E3;border-radius:6px;padding:8px 16px;"><div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;font-weight:500;line-height:16px;">Save</div></div>
+                <div style="background-color:#2D7A4F;border-radius:6px;padding:8px 16px;"><div style="color:#FFFFFF;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;font-weight:500;line-height:16px;">Run Simulation</div></div>
+              </div>
+            </div>
+            <!-- Side-by-side lists -->
+            <div style="display:flex;flex:1;">
+              <!-- Current -->
+              <div style="border-right:1px solid #E8E7E3;display:flex;flex-direction:column;gap:16px;padding:20px 24px;width:50%;">
+                <div style="display:flex;align-items:baseline;justify-content:space-between;">
+                  <div style="display:flex;align-items:baseline;gap:8px;">
+                    <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:18px;font-weight:600;line-height:22px;">Current</div>
+                    <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;line-height:16px;">148 SKUs</div>
+                  </div>
+                </div>
+                <div style="background-color:#FFFFFF;border:1px solid #E8E7E3;border-radius:8px;display:flex;flex-direction:column;overflow:hidden;">
+                  <div style="align-items:center;border-bottom:1px solid #E8E7E3;display:flex;padding:10px 14px;">
+                    <div style="border:1.5px solid #E8E7E3;border-radius:3px;flex-shrink:0;height:18px;width:18px;"></div>
+                    <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;flex:1;padding-left:10px;">Lay's Classic 10oz</div>
+                    <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;line-height:16px;">$1.8M</div>
+                  </div>
+                  <div style="align-items:center;border-bottom:1px solid #E8E7E3;display:flex;padding:10px 14px;">
+                    <div style="border:1.5px solid #E8E7E3;border-radius:3px;flex-shrink:0;height:18px;width:18px;"></div>
+                    <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;flex:1;padding-left:10px;">Doritos Nacho 9.25oz</div>
+                    <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;line-height:16px;">$1.4M</div>
+                  </div>
+                  <div style="align-items:center;border-bottom:1px solid #E8E7E3;display:flex;padding:10px 14px;">
+                    <div style="border:1.5px solid #E8E7E3;border-radius:3px;flex-shrink:0;height:18px;width:18px;"></div>
+                    <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;flex:1;padding-left:10px;">Snickers Bar 1.86oz</div>
+                    <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;line-height:16px;">$980K</div>
+                  </div>
+                  <!-- Flagged for removal -->
+                  <div style="align-items:center;background-color:#C8412B0A;border-bottom:1px solid #E8E7E3;display:flex;padding:10px 14px;">
+                    <div style="align-items:center;background-color:#C8412B;border-radius:3px;display:flex;flex-shrink:0;height:18px;justify-content:center;width:18px;"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+                    <div style="color:#C8412B;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;flex:1;padding-left:10px;">Pringles Original 5.5oz</div>
+                    <div style="color:#C8412B;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;line-height:16px;">$620K</div>
+                  </div>
+                  <div style="align-items:center;background-color:#C8412B0A;border-bottom:1px solid #E8E7E3;display:flex;padding:10px 14px;">
+                    <div style="align-items:center;background-color:#C8412B;border-radius:3px;display:flex;flex-shrink:0;height:18px;justify-content:center;width:18px;"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+                    <div style="color:#C8412B;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;flex:1;padding-left:10px;">Kettle Brand Sea Salt 8oz</div>
+                    <div style="color:#C8412B;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;line-height:16px;">$210K</div>
+                  </div>
+                  <div style="align-items:center;background-color:#C8412B0A;border-bottom:1px solid #E8E7E3;display:flex;padding:10px 14px;">
+                    <div style="align-items:center;background-color:#C8412B;border-radius:3px;display:flex;flex-shrink:0;height:18px;justify-content:center;width:18px;"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+                    <div style="color:#C8412B;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;flex:1;padding-left:10px;">PL Trail Mix 12oz</div>
+                    <div style="color:#C8412B;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;line-height:16px;">$145K</div>
+                  </div>
+                  <div style="align-items:center;display:flex;padding:10px 14px;"><div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;line-height:16px;">+ 142 more SKUs</div></div>
+                </div>
+                <div style="display:flex;gap:16px;">
+                  <div style="display:flex;flex-direction:column;gap:2px;"><div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;line-height:16px;text-transform:uppercase;">Revenue</div><div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:16px;font-weight:700;line-height:20px;">$14.2M</div></div>
+                  <div style="display:flex;flex-direction:column;gap:2px;"><div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;line-height:16px;text-transform:uppercase;">Margin</div><div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:16px;font-weight:700;line-height:20px;">31.4%</div></div>
+                  <div style="display:flex;flex-direction:column;gap:2px;"><div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;line-height:16px;text-transform:uppercase;">SKU Count</div><div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:16px;font-weight:700;line-height:20px;">148</div></div>
+                </div>
+              </div>
+              <!-- Proposed -->
+              <div style="display:flex;flex-direction:column;gap:16px;padding:20px 24px;width:50%;">
+                <div style="display:flex;align-items:baseline;justify-content:space-between;">
+                  <div style="display:flex;align-items:baseline;gap:8px;">
+                    <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:18px;font-weight:600;line-height:22px;">Proposed</div>
+                    <div style="color:#2D7A4F;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;font-weight:500;line-height:16px;">136 SKUs</div>
+                  </div>
+                  <div style="color:#C8412B;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;line-height:16px;">-12 removed</div>
+                </div>
+                <div style="background-color:#FFFFFF;border:1px solid #E8E7E3;border-radius:8px;display:flex;flex-direction:column;overflow:hidden;">
+                  <div style="align-items:center;border-bottom:1px solid #E8E7E3;display:flex;padding:10px 14px;">
+                    <div style="background-color:#2D7A4F;border-radius:50%;flex-shrink:0;height:8px;width:8px;"></div>
+                    <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;flex:1;padding-left:10px;">Lay's Classic 10oz</div>
+                    <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;line-height:16px;">$1.8M</div>
+                  </div>
+                  <div style="align-items:center;border-bottom:1px solid #E8E7E3;display:flex;padding:10px 14px;">
+                    <div style="background-color:#2D7A4F;border-radius:50%;flex-shrink:0;height:8px;width:8px;"></div>
+                    <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;flex:1;padding-left:10px;">Doritos Nacho 9.25oz</div>
+                    <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;line-height:16px;">$1.4M</div>
+                  </div>
+                  <div style="align-items:center;border-bottom:1px solid #E8E7E3;display:flex;padding:10px 14px;">
+                    <div style="background-color:#2D7A4F;border-radius:50%;flex-shrink:0;height:8px;width:8px;"></div>
+                    <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;flex:1;padding-left:10px;">Snickers Bar 1.86oz</div>
+                    <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;line-height:16px;">$980K</div>
+                  </div>
+                  <!-- New additions -->
+                  <div style="align-items:center;background-color:#2D7A4F0A;border-bottom:1px solid #E8E7E3;display:flex;padding:10px 14px;">
+                    <div style="background-color:#3B6FC0;border-radius:50%;flex-shrink:0;height:8px;width:8px;"></div>
+                    <div style="color:#3B6FC0;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:500;line-height:18px;flex:1;padding-left:10px;">SunChips Harvest 7oz</div>
+                    <div style="background-color:#3B6FC01A;border-radius:3px;padding:2px 6px;"><div style="color:#3B6FC0;font-family:'DM Sans',system-ui,sans-serif;font-size:11px;font-weight:500;line-height:14px;">NEW</div></div>
+                  </div>
+                  <div style="align-items:center;background-color:#2D7A4F0A;border-bottom:1px solid #E8E7E3;display:flex;padding:10px 14px;">
+                    <div style="background-color:#3B6FC0;border-radius:50%;flex-shrink:0;height:8px;width:8px;"></div>
+                    <div style="color:#3B6FC0;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:500;line-height:18px;flex:1;padding-left:10px;">Kind Bar Variety 6pk</div>
+                    <div style="background-color:#3B6FC01A;border-radius:3px;padding:2px 6px;"><div style="color:#3B6FC0;font-family:'DM Sans',system-ui,sans-serif;font-size:11px;font-weight:500;line-height:14px;">NEW</div></div>
+                  </div>
+                  <div style="align-items:center;display:flex;padding:10px 14px;"><div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;line-height:16px;">+ 131 more SKUs</div></div>
+                </div>
+                <div style="display:flex;gap:16px;">
+                  <div style="display:flex;flex-direction:column;gap:2px;"><div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;line-height:16px;text-transform:uppercase;">Revenue</div><div style="display:flex;align-items:baseline;gap:6px;"><div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:16px;font-weight:700;line-height:20px;">$13.9M</div><div style="color:#C8412B;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;line-height:16px;">-2.1%</div></div></div>
+                  <div style="display:flex;flex-direction:column;gap:2px;"><div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;line-height:16px;text-transform:uppercase;">Margin</div><div style="display:flex;align-items:baseline;gap:6px;"><div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:16px;font-weight:700;line-height:20px;">32.8%</div><div style="color:#2D7A4F;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;line-height:16px;">+1.4%</div></div></div>
+                  <div style="display:flex;flex-direction:column;gap:2px;"><div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;line-height:16px;text-transform:uppercase;">SKU Count</div><div style="display:flex;align-items:baseline;gap:6px;"><div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:16px;font-weight:700;line-height:20px;">136</div><div style="color:#2D7A4F;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;line-height:16px;">-8.1%</div></div></div>
+                </div>
+              </div>
+            </div>
+            <!-- Bottom impact bar -->
+            <div style="background-color:#FFFFFF;border-top:1px solid #E8E7E3;display:flex;flex-shrink:0;gap:16px;padding:16px 32px;">
+              <div style="background-color:#FAFAF9;border:1px solid #E8E7E3;border-radius:8px;display:flex;flex:1;flex-direction:column;gap:6px;padding:16px 20px;">
+                <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;line-height:16px;text-transform:uppercase;">Revenue Impact</div>
+                <div style="color:#C8412B;font-family:'DM Sans',system-ui,sans-serif;font-size:20px;font-weight:700;letter-spacing:-0.01em;line-height:24px;">-2.1% / -$340K</div>
+                <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;line-height:16px;">Annualized estimate</div>
+              </div>
+              <div style="background-color:#FAFAF9;border:1px solid #E8E7E3;border-radius:8px;display:flex;flex:1;flex-direction:column;gap:6px;padding:16px 20px;">
+                <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;line-height:16px;text-transform:uppercase;">Margin Impact</div>
+                <div style="color:#2D7A4F;font-family:'DM Sans',system-ui,sans-serif;font-size:20px;font-weight:700;letter-spacing:-0.01em;line-height:24px;">+1.4% / +$180K</div>
+                <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;line-height:16px;">Net margin improvement</div>
+              </div>
+              <div style="background-color:#FAFAF9;border:1px solid #E8E7E3;border-radius:8px;display:flex;flex:1;flex-direction:column;gap:6px;padding:16px 20px;">
+                <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;line-height:16px;text-transform:uppercase;">Cannibalization Risk</div>
+                <div style="color:#2D7A4F;font-family:'DM Sans',system-ui,sans-serif;font-size:20px;font-weight:700;letter-spacing:-0.01em;line-height:24px;">Low</div>
+                <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;line-height:16px;">82% substitution coverage</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ Screen 4: Approval & Governance ═══ -->
+      <div class="screen-section">
+        <p class="screen-label">04 / Approval &amp; Governance</p>
+        <p class="screen-desc">The final gate — structured recommendation with impact metrics, confidence score, and a full audit trail from scenario creation through approval.</p>
+        <div class="screen-frame">
+          <div class="aiq-screen" style="background-color:#FAFAF9;display:flex;flex-direction:column;width:100%;aspect-ratio:1440/900;">
+            <!-- Top nav -->
+            <div style="align-items:center;background-color:#FFFFFF;border-bottom:1px solid #E8E7E3;display:flex;flex-shrink:0;height:56px;justify-content:space-between;padding:0 32px;">
+              <div style="align-items:center;display:flex;gap:8px;">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="8" height="8" rx="2" fill="#2D7A4F"/><rect x="11" y="1" width="8" height="8" rx="2" fill="#2D7A4F" opacity="0.5"/><rect x="1" y="11" width="8" height="8" rx="2" fill="#2D7A4F" opacity="0.5"/><rect x="11" y="11" width="8" height="8" rx="2" fill="#2D7A4F" opacity="0.25"/></svg>
+                <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:16px;font-weight:700;letter-spacing:-0.02em;line-height:20px;">AssortIQ</div>
+              </div>
+              <div style="align-items:center;display:flex;gap:20px;">
+                <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;line-height:16px;">Copilot</div>
+                <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;line-height:16px;">Scenarios</div>
+                <div style="color:#3B6FC0;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;font-weight:500;line-height:16px;">Approvals</div>
+                <div style="align-items:center;background-color:#E8E7E3;border-radius:50%;display:flex;flex-shrink:0;height:32px;justify-content:center;width:32px;"><div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:600;line-height:16px;">JM</div></div>
+              </div>
+            </div>
+            <!-- Centered content -->
+            <div style="align-items:center;display:flex;flex:1;flex-direction:column;overflow:hidden;padding:32px;">
+              <div style="display:flex;flex-direction:column;gap:24px;max-width:100%;width:720px;">
+                <!-- Recommendation card -->
+                <div style="background-color:#FFFFFF;border:1px solid #E8E7E3;border-radius:10px;display:flex;flex-direction:column;gap:16px;padding:24px;">
+                  <div style="display:flex;flex-direction:column;gap:4px;">
+                    <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;line-height:16px;text-transform:uppercase;">Recommendation</div>
+                    <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:24px;font-weight:700;letter-spacing:-0.02em;line-height:30px;">Rationalize 12 SKUs in Snacks — Southeast Region</div>
+                  </div>
+                  <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:160%;">Analysis identified 12 low-velocity SKUs contributing only 3.2% of category revenue while occupying 8.1% of shelf space. Removing these SKUs and replacing with 2 high-potential alternatives is projected to improve margin by +1.4pp while maintaining 82% substitution coverage for displaced demand.</div>
+                </div>
+                <!-- Impact metrics -->
+                <div style="background-color:#FAFAF9;border:1px solid #E8E7E3;border-radius:10px;display:flex;gap:16px;padding:20px;">
+                  <div style="display:flex;flex:1;flex-direction:column;gap:4px;">
+                    <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;line-height:16px;text-transform:uppercase;">Revenue</div>
+                    <div style="color:#C8412B;font-family:'DM Sans',system-ui,sans-serif;font-size:20px;font-weight:700;line-height:24px;">-$340K</div>
+                    <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;line-height:16px;">-2.1% annualized</div>
+                  </div>
+                  <div style="background-color:#E8E7E3;flex-shrink:0;width:1px;"></div>
+                  <div style="display:flex;flex:1;flex-direction:column;gap:4px;">
+                    <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;line-height:16px;text-transform:uppercase;">Margin</div>
+                    <div style="color:#2D7A4F;font-family:'DM Sans',system-ui,sans-serif;font-size:20px;font-weight:700;line-height:24px;">+$180K</div>
+                    <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;line-height:16px;">+1.4pp improvement</div>
+                  </div>
+                  <div style="background-color:#E8E7E3;flex-shrink:0;width:1px;"></div>
+                  <div style="display:flex;flex:1;flex-direction:column;gap:4px;">
+                    <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;line-height:16px;text-transform:uppercase;">Availability</div>
+                    <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:20px;font-weight:700;line-height:24px;">97.1%</div>
+                    <div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;line-height:16px;">-0.2pp from current</div>
+                  </div>
+                  <div style="background-color:#E8E7E3;flex-shrink:0;width:1px;"></div>
+                  <div style="display:flex;flex:1;flex-direction:column;gap:4px;">
+                    <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:0.06em;line-height:16px;text-transform:uppercase;">Confidence</div>
+                    <div style="color:#2D7A4F;font-family:'DM Sans',system-ui,sans-serif;font-size:20px;font-weight:700;line-height:24px;">92%</div>
+                    <div style="background-color:#E8E7E3;border-radius:2px;display:flex;height:4px;"><div style="background-color:#2D7A4F;border-radius:2px;width:92%;"></div></div>
+                  </div>
+                </div>
+                <!-- Submitter + actions -->
+                <div style="align-items:center;background-color:#FFFFFF;border:1px solid #E8E7E3;border-radius:10px;display:flex;justify-content:space-between;padding:16px 20px;">
+                  <div style="align-items:center;display:flex;gap:12px;">
+                    <div style="align-items:center;background-color:#E8E7E3;border-radius:50%;display:flex;flex-shrink:0;height:32px;justify-content:center;width:32px;"><div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;font-weight:600;line-height:16px;">JM</div></div>
+                    <div style="display:flex;flex-direction:column;gap:1px;">
+                      <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:500;line-height:18px;">Submitted by Julia Martinez</div>
+                      <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;line-height:16px;">Category Manager · Mar 28, 2026</div>
+                    </div>
+                  </div>
+                  <div style="align-items:center;display:flex;gap:8px;">
+                    <div style="border:1px solid #E8E7E3;border-radius:6px;padding:8px 16px;"><div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;font-weight:500;line-height:16px;">Add Note</div></div>
+                    <div style="border:1px solid #E8E7E3;border-radius:6px;padding:8px 16px;"><div style="color:#6B6B63;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;font-weight:500;line-height:16px;">Request Changes</div></div>
+                    <div style="background-color:#2D7A4F;border-radius:6px;padding:8px 20px;"><div style="color:#FFFFFF;font-family:'DM Sans',system-ui,sans-serif;font-size:13px;font-weight:500;line-height:16px;">Approve</div></div>
+                  </div>
+                </div>
+                <!-- Audit Trail -->
+                <div style="background-color:#FFFFFF;border:1px solid #E8E7E3;border-radius:10px;display:flex;flex-direction:column;padding:20px 24px;">
+                  <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:600;line-height:18px;padding-bottom:16px;">Audit Trail</div>
+                  <div style="border-top:1px solid #E8E7E3;display:flex;gap:12px;padding:12px 0;">
+                    <div style="align-items:center;display:flex;flex-direction:column;flex-shrink:0;gap:4px;width:16px;">
+                      <div style="background-color:#8B7355;border-radius:50%;flex-shrink:0;height:8px;width:8px;"></div>
+                      <div style="background-color:#E8E7E3;flex:1;width:1px;"></div>
+                    </div>
+                    <div style="display:flex;flex:1;flex-direction:column;gap:2px;">
+                      <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;">Pending: Category Director review</div>
+                      <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;line-height:16px;">Awaiting approval · Now</div>
+                    </div>
+                  </div>
+                  <div style="border-top:1px solid #E8E7E3;display:flex;gap:12px;padding:12px 0;">
+                    <div style="align-items:center;display:flex;flex-direction:column;flex-shrink:0;gap:4px;width:16px;">
+                      <div style="background-color:#2D7A4F;border-radius:50%;flex-shrink:0;height:8px;width:8px;"></div>
+                      <div style="background-color:#E8E7E3;flex:1;width:1px;"></div>
+                    </div>
+                    <div style="display:flex;flex:1;flex-direction:column;gap:2px;">
+                      <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;">Submitted for approval</div>
+                      <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;line-height:16px;">J. Martinez · Mar 28, 2026 · 2:15 PM</div>
+                    </div>
+                  </div>
+                  <div style="border-top:1px solid #E8E7E3;display:flex;gap:12px;padding:12px 0;">
+                    <div style="align-items:center;display:flex;flex-direction:column;flex-shrink:0;gap:4px;width:16px;">
+                      <div style="background-color:#2D7A4F;border-radius:50%;flex-shrink:0;height:8px;width:8px;"></div>
+                      <div style="background-color:#E8E7E3;flex:1;width:1px;"></div>
+                    </div>
+                    <div style="display:flex;flex:1;flex-direction:column;gap:2px;">
+                      <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;">Simulation run — results reviewed</div>
+                      <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;line-height:16px;">J. Martinez · Mar 27, 2026 · 4:42 PM</div>
+                    </div>
+                  </div>
+                  <div style="border-top:1px solid #E8E7E3;display:flex;gap:12px;padding:12px 0;">
+                    <div style="align-items:center;display:flex;flex-direction:column;flex-shrink:0;gap:4px;width:16px;">
+                      <div style="background-color:#2D7A4F;border-radius:50%;flex-shrink:0;height:8px;width:8px;"></div>
+                    </div>
+                    <div style="display:flex;flex:1;flex-direction:column;gap:2px;">
+                      <div style="color:#1A1A18;font-family:'DM Sans',system-ui,sans-serif;font-size:14px;line-height:18px;">Scenario created by J. Martinez</div>
+                      <div style="color:#9C9B95;font-family:'DM Sans',system-ui,sans-serif;font-size:12px;line-height:16px;">Via Copilot suggestion · Mar 26, 2026 · 10:08 AM</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Scott Herford</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/james-herford-62110391/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://substack.com/@aldarametricsong" target="_blank" rel="noopener">Substack</a>
+        <a href="https://github.com/GeraltMagic" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
