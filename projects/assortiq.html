@@ -84,6 +84,7 @@
         <p>
           An MCP server with 6 tools and 3 resources, built on FastMCP and connected to Claude via the Anthropic SDK.
           The model drives orchestration — it decides when and how to call the tools based on what the user is asking.
+          Two working prototypes — a <a href="https://huggingface.co/spaces/TatorTotXX/AssortmentInsights" target="_blank" rel="noopener">live Gradio Space</a> and an enhanced terminal REPL — call the same tool functions, proving the architecture end-to-end.
         </p>
 
         <div class="table-wrap">
@@ -156,6 +157,22 @@
               </tr>
             </tbody>
           </table>
+        </div>
+      </div>
+
+      <!-- Working prototypes -->
+      <div class="cs-section">
+        <p class="cs-section-label">Working prototypes</p>
+        <p>Two surfaces that call the same underlying tool functions as the MCP server — proving the architecture works end-to-end with real ML models.</p>
+
+        <div class="decision-card">
+          <strong>Gradio Space — <a href="https://huggingface.co/spaces/TatorTotXX/AssortmentInsights" target="_blank" rel="noopener">Try it live →</a></strong>
+          <p>Three-tab web app deployed on HuggingFace Spaces. Business Overview tab loads category health scores and store clusters on startup. Copilot tab accepts natural language queries and routes them to real tool calls (search, similarity, forecast, health, recommendations). Simulation tab runs add/drop/swap recommendations with forecast impact projections. Uses lighter models for the free tier: Chronos-Bolt-Tiny for forecasting, all-MiniLM-L6-v2 for embeddings.</p>
+        </div>
+
+        <div class="decision-card">
+          <strong>Terminal REPL — MerchAssistant</strong>
+          <p>Enhanced Anthropic SDK-powered chat assistant with slash commands that bypass the API for instant results. <code>/overview</code> renders a Rich-formatted category health table across all five categories. <code>/diagnose &lt;category&gt;</code> shows health panels, at-risk SKUs, and similar items. <code>/simulate &lt;category&gt;</code> displays add/drop/swap recommendations with forecast comparison. All commands call the same Python functions as the MCP server and format output with Rich tables and panels.</p>
         </div>
       </div>
 
