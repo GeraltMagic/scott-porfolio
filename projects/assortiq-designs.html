@@ -67,6 +67,30 @@
       line-height: 1.6;
       max-width: 640px;
     }
+    .screen-img {
+      width: 100%;
+      display: block;
+    }
+    .screen-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 8px;
+      padding: 6px 14px;
+      font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: transparent;
+      cursor: pointer;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .screen-toggle:hover { color: var(--fg); border-color: var(--muted); }
+    .screen-interactive { display: none; }
+    .screen-section.expanded .screen-interactive { display: block; }
+    .screen-section.expanded .screen-static { display: none; }
     @media (max-width: 680px) {
       .screen-frame { border-radius: 6px; }
       .screen-grid { padding: 32px 16px 80px; gap: 48px; }
@@ -97,7 +121,11 @@
       <div class="screen-section">
         <p class="screen-label">01 / Executive Overview</p>
         <p class="screen-desc">The VP's dashboard — trailing KPIs, risk signals, and recommended actions in one view. No drilling required for the daily check-in.</p>
-        <div class="screen-frame">
+        <div class="screen-frame screen-static">
+          <img class="screen-img" src="../images/assortiq/01-executive-overview.png" alt="AssortIQ Executive Overview — KPI dashboard with sales lift, margin, availability metrics and risk summary" loading="lazy" />
+        </div>
+        <button class="screen-toggle" onclick="this.closest('.screen-section').classList.toggle('expanded')">View interactive version</button>
+        <div class="screen-frame screen-interactive">
           <div class="aiq-screen" style="background-color:#FAFAF9;display:flex;flex-direction:column;width:100%;aspect-ratio:1440/900;">
             <!-- Top nav -->
             <div style="align-items:center;background-color:#FFFFFF;border-bottom:1px solid #E8E7E3;display:flex;flex-shrink:0;height:56px;justify-content:space-between;padding:0 32px;">
@@ -243,7 +271,11 @@
       <div class="screen-section">
         <p class="screen-label">02 / Assortment Copilot</p>
         <p class="screen-desc">Conversational AI copilot paired with a live SKU table. The category manager asks a question; the copilot surfaces data and proposes tradeoffs inline.</p>
-        <div class="screen-frame">
+        <div class="screen-frame screen-static">
+          <img class="screen-img" src="../images/assortiq/02-assortment-copilot.png" alt="AssortIQ Copilot — conversational AI analysis of Snacks category with SKU data table" loading="lazy" />
+        </div>
+        <button class="screen-toggle" onclick="this.closest('.screen-section').classList.toggle('expanded')">View interactive version</button>
+        <div class="screen-frame screen-interactive">
           <div class="aiq-screen" style="background-color:#FAFAF9;display:flex;flex-direction:column;width:100%;aspect-ratio:1440/900;">
             <!-- Top nav -->
             <div style="align-items:center;background-color:#FFFFFF;border-bottom:1px solid #E8E7E3;display:flex;flex-shrink:0;height:56px;justify-content:space-between;padding:0 32px;">
@@ -390,7 +422,11 @@
       <div class="screen-section">
         <p class="screen-label">03 / Scenario Workspace</p>
         <p class="screen-desc">Side-by-side current vs. proposed assortment with SKU-level add/remove controls. Impact metrics update live as the user adjusts the mix.</p>
-        <div class="screen-frame">
+        <div class="screen-frame screen-static">
+          <img class="screen-img" src="../images/assortiq/03-scenario-workspace.png" alt="AssortIQ Scenario Workspace — side-by-side current vs proposed assortment with impact metrics" loading="lazy" />
+        </div>
+        <button class="screen-toggle" onclick="this.closest('.screen-section').classList.toggle('expanded')">View interactive version</button>
+        <div class="screen-frame screen-interactive">
           <div class="aiq-screen" style="background-color:#FAFAF9;display:flex;flex-direction:column;width:100%;aspect-ratio:1440/900;">
             <!-- Top nav -->
             <div style="align-items:center;background-color:#FFFFFF;border-bottom:1px solid #E8E7E3;display:flex;flex-shrink:0;height:56px;justify-content:space-between;padding:0 32px;">
@@ -538,7 +574,11 @@
       <div class="screen-section">
         <p class="screen-label">04 / Approval &amp; Governance</p>
         <p class="screen-desc">The final gate — structured recommendation with impact metrics, confidence score, and a full audit trail from scenario creation through approval.</p>
-        <div class="screen-frame">
+        <div class="screen-frame screen-static">
+          <img class="screen-img" src="../images/assortiq/04-approval-governance.png" alt="AssortIQ Approval &amp; Governance — recommendation review with audit trail and approval workflow" loading="lazy" />
+        </div>
+        <button class="screen-toggle" onclick="this.closest('.screen-section').classList.toggle('expanded')">View interactive version</button>
+        <div class="screen-frame screen-interactive">
           <div class="aiq-screen" style="background-color:#FAFAF9;display:flex;flex-direction:column;width:100%;aspect-ratio:1440/900;">
             <!-- Top nav -->
             <div style="align-items:center;background-color:#FFFFFF;border-bottom:1px solid #E8E7E3;display:flex;flex-shrink:0;height:56px;justify-content:space-between;padding:0 32px;">
