@@ -112,7 +112,7 @@
   <main>
     <div class="designs-intro">
       <h1>AssortIQ — Product Design</h1>
-      <p>Four connected surfaces showing the future-state product — from executive dashboard to AI copilot to scenario simulation to governance approval. Each screen is designed at 1440px for desktop.</p>
+      <p>Eight design surfaces across two iterations — from executive dashboard to AI copilot to scenario simulation to governance approval. V1 establishes the core product; V2 adds an enterprise command center with holistic business view, copilot diagnosis, and simulation workflow. All screens designed at 1440px for desktop.</p>
     </div>
 
     <div class="screen-grid">
@@ -691,6 +691,51 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════════ -->
+      <!-- V2 — Command Center                        -->
+      <!-- ═══════════════════════════════════════════ -->
+
+      <div style="border-top:1px solid var(--border);margin-top:24px;padding-top:48px;">
+        <p class="screen-label" style="font-size:0.85rem;margin-bottom:4px;">V2 — Command Center</p>
+        <p class="screen-desc">Second iteration: three connected surfaces that take the user from enterprise-wide overview through AI-powered diagnosis to simulation and approval. Designed to map 1-to-1 with the MCP server's tool architecture.</p>
+      </div>
+
+      <!-- ═══ Screen 5: Holistic Business View ═══ -->
+      <div class="screen-section">
+        <p class="screen-label">05 / Holistic Business View</p>
+        <p class="screen-desc">Enterprise-wide KPIs, top opportunities, and category performance in one surface. The recommended actions panel drives the user into the diagnosis flow. Powered by <code>get_category_health</code>, <code>cluster_stores</code>, and <code>get_assortment_recommendations</code>.</p>
+        <div class="screen-frame">
+          <img class="screen-img" src="../images/assortiq/05-holistic-business-view.png" alt="AssortIQ Holistic Business View — enterprise KPIs, category performance table, and recommended actions panel" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- ═══ Screen 6: Copilot Diagnosis ═══ -->
+      <div class="screen-section">
+        <p class="screen-label">06 / Copilot Diagnosis</p>
+        <p class="screen-desc">Category-level diagnosis with SKU performance map, insight cards, and conversational copilot. The copilot uses real tool calls — <code>get_category_health</code>, <code>find_similar_items</code>, <code>search_skus</code>, <code>forecast_demand</code> — to analyze problems and propose actions.</p>
+        <div class="screen-frame">
+          <img class="screen-img" src="../images/assortiq/06-copilot-diagnosis.png" alt="AssortIQ Copilot Diagnosis — SKU performance map, insight cards, and AI copilot conversation" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- ═══ Screen 7: Simulation & Approval ═══ -->
+      <div class="screen-section">
+        <p class="screen-label">07 / Simulation &amp; Approval</p>
+        <p class="screen-desc">Before/after comparison of current vs optimized assortment. SKU change table with remove/keep/add actions, impact KPIs, risk assessment, and governance approval workflow. Powered by <code>get_assortment_recommendations</code> and <code>forecast_demand</code>.</p>
+        <div class="screen-frame">
+          <img class="screen-img" src="../images/assortiq/07-simulation-approval.png" alt="AssortIQ Simulation and Approval — before/after assortment comparison with SKU action table and approval workflow" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- ═══ Screen 8: User Flow ═══ -->
+      <div class="screen-section">
+        <p class="screen-label">08 / User Flow</p>
+        <p class="screen-desc">End-to-end journey from executive overview to approved optimization. Three stages — Holistic Business View → Copilot Diagnosis → Simulation &amp; Approval — with clear triggers and feedback loops.</p>
+        <div class="screen-frame">
+          <img class="screen-img" src="../images/assortiq/08-user-flow.png" alt="AssortIQ User Flow — three-stage assortment optimization journey" loading="lazy" />
         </div>
       </div>
 

@@ -89,38 +89,74 @@
         <div class="table-wrap">
           <table>
             <thead>
-              <tr><th>Tool</th><th>What it does</th></tr>
+              <tr><th>Tool</th><th>What it does</th><th>Used in</th></tr>
             </thead>
             <tbody>
               <tr>
                 <td>forecast_demand</td>
                 <td>SKU-level demand forecasting using Chronos-Bolt time-series model. Falls back to EWMA when the pipeline isn't available.</td>
+                <td>Copilot, Simulation</td>
               </tr>
               <tr>
                 <td>find_similar_items</td>
                 <td>Embedding-based SKU similarity using BGE sentence-transformers. Solves the "what's like this?" question at scale.</td>
+                <td>Copilot</td>
               </tr>
               <tr>
                 <td>cluster_stores</td>
                 <td>Auto-segments stores into data-driven clusters based on sales patterns and format — not manual tiers.</td>
+                <td>Business View</td>
               </tr>
               <tr>
                 <td>get_assortment_recommendations</td>
                 <td>Add/drop/swap recommendations at the store-cluster level, with rationale. Human approves or overrides every call.</td>
+                <td>Business View, Simulation</td>
               </tr>
               <tr>
                 <td>get_category_health</td>
                 <td>Scorecard per category: revenue, margin, sell-through, out-of-stocks, SKU redundancy (cannibalizing items).</td>
+                <td>Business View, Copilot</td>
               </tr>
               <tr>
                 <td>search_skus</td>
                 <td>Semantic search across the SKU catalog. Natural language queries return ranked matches.</td>
+                <td>Copilot</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <p>Resources available to the model at inference time: 100-SKU catalog, 20-store attribute set, and aggregate sales summary.</p>
+      </div>
+
+      <!-- Design ↔ API mapping -->
+      <div class="cs-section">
+        <p class="cs-section-label">Design ↔ API mapping</p>
+        <p>Each V2 design surface maps directly to MCP server tools. The model orchestrates tool calls based on what the screen needs.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Screen</th><th>MCP Tools</th><th>Data Flow</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Holistic Business View</td>
+                <td><code>get_category_health</code> (×5), <code>get_assortment_recommendations</code>, <code>cluster_stores</code></td>
+                <td>Health scores → KPI cards. Clusters → segmentation. Recommendations → action items.</td>
+              </tr>
+              <tr>
+                <td>Copilot Diagnosis</td>
+                <td><code>get_category_health</code>, <code>find_similar_items</code>, <code>search_skus</code>, <code>forecast_demand</code></td>
+                <td>Health → diagnosis. Search/similarity → copilot answers. Forecast → inline demand view.</td>
+              </tr>
+              <tr>
+                <td>Simulation &amp; Approval</td>
+                <td><code>get_assortment_recommendations</code> (scoring), <code>forecast_demand</code> (projection)</td>
+                <td>Scoring → drop/add/swap table. Forecast → revenue/margin impact.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <!-- Key decisions -->
@@ -196,8 +232,11 @@
       <!-- Product design -->
       <div class="cs-section">
         <p class="cs-section-label">Product design</p>
-        <p>Four connected surfaces showing the future-state product — from executive dashboard to AI copilot to scenario simulation to governance approval.</p>
-        <div style="display:flex;flex-direction:column;gap:12px;margin-top:16px;">
+        <p>Eight design surfaces across two iterations — from executive dashboard to AI copilot to scenario simulation to governance approval. V2 adds an enterprise command center mapped 1-to-1 with the MCP server's tool architecture.</p>
+
+        <!-- V1 thumbnails -->
+        <p style="color:var(--muted);font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;margin-top:20px;margin-bottom:8px;">V1 — Core Product</p>
+        <div style="display:flex;flex-direction:column;gap:12px;">
           <a href="assortiq-designs.html" style="display:block;border-radius:8px;overflow:hidden;border:1px solid var(--border);transition:box-shadow 0.2s;">
             <img src="../images/assortiq/01-executive-overview.png" alt="AssortIQ Executive Overview" style="width:100%;display:block;" loading="lazy" />
           </a>
@@ -213,7 +252,25 @@
             </a>
           </div>
         </div>
-        <a href="assortiq-designs.html" class="btn btn-primary" style="display:inline-flex;margin-top:12px;padding:10px 20px;font-size:0.875rem;">View all designs →</a>
+
+        <!-- V2 thumbnails -->
+        <p style="color:var(--muted);font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;margin-top:20px;margin-bottom:8px;">V2 — Command Center</p>
+        <div style="display:flex;gap:8px;">
+          <a href="assortiq-designs.html" style="flex:1;border-radius:6px;overflow:hidden;border:1px solid var(--border);">
+            <img src="../images/assortiq/05-holistic-business-view.png" alt="AssortIQ Holistic Business View" style="width:100%;display:block;" loading="lazy" />
+          </a>
+          <a href="assortiq-designs.html" style="flex:1;border-radius:6px;overflow:hidden;border:1px solid var(--border);">
+            <img src="../images/assortiq/06-copilot-diagnosis.png" alt="AssortIQ Copilot Diagnosis" style="width:100%;display:block;" loading="lazy" />
+          </a>
+          <a href="assortiq-designs.html" style="flex:1;border-radius:6px;overflow:hidden;border:1px solid var(--border);">
+            <img src="../images/assortiq/07-simulation-approval.png" alt="AssortIQ Simulation and Approval" style="width:100%;display:block;" loading="lazy" />
+          </a>
+        </div>
+
+        <div style="display:flex;gap:10px;margin-top:16px;">
+          <a href="assortiq-designs.html" class="btn btn-primary" style="display:inline-flex;padding:10px 20px;font-size:0.875rem;">View all designs →</a>
+          <a href="https://huggingface.co/spaces/TatorTotXX/AssortmentInsights" target="_blank" rel="noopener" class="btn btn-secondary" style="display:inline-flex;padding:10px 20px;font-size:0.875rem;">Try live prototype →</a>
+        </div>
       </div>
 
     </div>
