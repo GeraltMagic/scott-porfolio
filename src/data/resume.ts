@@ -35,6 +35,8 @@ export const skills = [
       "Jupyter",
       "Experimentation & A/B Testing",
       "Data Visualization (Power BI)",
+      "Google Cloud Platform",
+      "Microsoft Azure",
     ],
   },
   {
