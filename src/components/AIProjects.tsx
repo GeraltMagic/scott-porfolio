@@ -2,7 +2,7 @@ import { aiProjects } from "@/data/resume";
 
 export default function AIProjects() {
   return (
-    <section id="projects" className="bg-stone-100/50">
+    <section id="ai-projects" className="bg-stone-100/50">
       <div className="max-w-4xl mx-auto px-6 py-16">
         <h2 className="text-xs tracking-[0.2em] uppercase text-stone-400 mb-8">
           Independent AI Projects

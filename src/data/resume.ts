@@ -113,6 +113,53 @@ export const experience = [
   },
 ];
 
+export const projects = [
+  {
+    title: "AssortIQ",
+    subtitle: "AI-Powered Assortment Optimization",
+    description:
+      "MCP server with 6 AI tools — Chronos-Bolt demand forecasting, embedding-based SKU similarity, store clustering, and recommendation engine. Built for mid-market retailers who lack enterprise-grade assortment intelligence.",
+    impact: "Designed for review-cycle reduction from weeks to days with human-in-the-loop approval on every recommendation.",
+    stack: ["Python", "FastMCP", "Chronos", "Sentence-Transformers", "Anthropic SDK"],
+    role: "Solo PM + Engineer",
+    year: "2025",
+    caseStudy: "/projects/assortiq.html",
+  },
+  {
+    title: "Attribute Enrichment",
+    subtitle: "Ecommerce Discovery Pipeline",
+    description:
+      "Confidence-aware attribute enrichment system for ecommerce catalogs. Surfaces medium-confidence predictions for human review while behavioral signals (searches, clicks, conversions) update confidence scores in real time.",
+    impact: "Addresses zero-result rates and poor filter coverage caused by incomplete product attribute data across long-tail SKUs.",
+    stack: ["React", "Hooks", "Zero Dependencies"],
+    role: "Solo PM + Engineer",
+    year: "2025",
+    caseStudy: "/projects/attribute-enrichment.html",
+  },
+  {
+    title: "WeatherWear",
+    subtitle: "Personalized Clothing Recommendation Engine",
+    description:
+      "Scoring engine that combines 6 environmental signals with user profile dimensions (thermal tendency, age, activity level) to produce personalized clothing recommendations. Every suggestion includes an explainability breakdown.",
+    impact: "67-item scoring model with dynamic weight capping, full feedback loop, and exportable training data for model iteration.",
+    stack: ["React", "JSX", "Lucide"],
+    role: "Solo PM + Engineer",
+    year: "2025",
+    caseStudy: "/projects/weatherwear.html",
+  },
+  {
+    title: "Royals Player Insights",
+    subtitle: "MLB Analytics & Causal Inference Dashboard",
+    description:
+      "Python analytics engine combining SARIMAX forecasting, feature importance, partial dependence plots, causal inference (DoWhy/EconML), and anomaly detection — going past correlation to answer what caused performance changes.",
+    impact: "CLI-first design with synthetic data fallback, soft dependency stack, and full test suite for offline/CI use.",
+    stack: ["Python", "pandas", "statsmodels", "DoWhy", "EconML", "pybaseball"],
+    role: "Solo PM + Analyst",
+    year: "2025",
+    caseStudy: "/projects/royals.html",
+  },
+];
+
 export const aiProjects = [
   {
     title: "Agentic AI Technical Curriculum",
