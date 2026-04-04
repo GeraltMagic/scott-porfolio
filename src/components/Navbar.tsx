@@ -6,9 +6,9 @@ import { personalInfo } from "@/data/resume";
 const navLinks = [
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
+  { label: "AI Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
   { label: "Education", href: "#education" },
-  { label: "Publications", href: "#publications" },
   { label: "Contact", href: "#contact" },
 ];
 

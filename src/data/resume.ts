@@ -1,144 +1,149 @@
 export const personalInfo = {
-  name: "Scott Herford",
-  title: "Product Manager",
-  email: "james.scott.herford@gmail.com",
-  location: "Northwest Arkansas",
-  bio: "Product manager with 7+ years of experience delivering data-driven, analytics, and machine-learning-enabled products in large-scale retail and international environments. Proven ability to partner with engineering, data science, and business stakeholders to deliver measurable commercial outcomes. United States Marine Corps veteran.",
+  name: "James Scott Herford",
+  title: "Senior Product Manager, AI/ML",
+  email: "scottherford22@icloud.com",
+  phone: "(479) 453-9820",
+  location: "Bentonville, AR",
+  bio: "Product manager with 7+ years of progressive experience shipping ML-powered products at Fortune 1 scale. Led development and deployment of production recommendation engines achieving 95% user acceptance and $5.4M incremental sales across international markets. Combines an M.S. in Data Science with hands-on AI building skills (agentic AI frameworks, LLM-powered tools, Python, SQL) and deep cross-functional leadership experience translating complex ML capabilities into products real users trust and adopt.",
   social: {
-    linkedin: "https://linkedin.com/in/scottherford",
+    linkedin: "https://linkedin.com/in/scott-h-ma-msds-62110391",
     github: "https://github.com/GeraltMagic",
   },
 };
 
 export const skills = [
   {
-    category: "Product Management",
+    category: "AI/ML Product",
     items: [
-      "Product Management",
-      "Roadmapping",
-      "Agile Delivery",
-      "Stakeholder Management",
-      "OKRs",
-      "Experimentation",
+      "AI/ML Product Strategy",
+      "Production ML Systems",
+      "Recommendation Engines",
+      "Agentic AI",
+      "LLM Applications",
+      "Responsible AI",
     ],
   },
   {
-    category: "Data & Analytics",
+    category: "Data & Technical",
     items: [
-      "Data & Analytics Platforms",
-      "Machine Learning Enablement",
-      "SQL",
-      "Python",
-      "Assortment Optimization",
-    ],
-  },
-  {
-    category: "Technical",
-    items: [
-      "Cloud Platforms",
-      "Agile / Scrum",
-      "SAFe",
-      "DevOps",
-      "Cybersecurity",
-    ],
-  },
-  {
-    category: "Domain",
-    items: [
-      "International Retail",
-      "Merchandising",
-      "Supply Chain",
       "Data Science",
+      "Python",
+      "SQL",
+      "Experimentation & A/B Testing",
+      "Data Visualization (Power BI)",
+    ],
+  },
+  {
+    category: "Leadership & Delivery",
+    items: [
+      "Cross-Functional Leadership",
+      "Stakeholder Management",
+      "Agile / SAFe",
+      "International Markets",
     ],
   },
 ];
 
+export const selectedAchievements = [
+  "Shipped an ML-backed recommendation engine with a 95% merchant acceptance rate that generated $5.4M incremental sales across Central American markets",
+  "Designed and validated ML-informed modular assortments driving 2–3% sales lift across four international markets (Mexico Retail, Sam's Mexico, Canada, Central America)",
+  "Reduced assortment decision cycle time by 50% through automation of data pipelines and standardized decision templates",
+  "Optimized production analytics infrastructure, cutting on-demand job runtime from 12 hours to 1.5 hours, accelerating model validation and merchant feedback loops",
+];
+
 export const experience = [
   {
-    role: "Cybersecurity Security Analyst Apprentice",
-    company: "Walmart",
-    location: "Northwest Arkansas",
-    startDate: "Jan 2024",
-    endDate: "Jan 2025",
-    bullets: [
-      "Participated in a structured cybersecurity apprenticeship focused on enterprise security operations, risk awareness, and workforce development",
-      "Engaged in approved industry panels and professional development events addressing cybersecurity talent pipelines and operational readiness",
-    ],
-  },
-  {
-    role: "Product Manager III",
+    role: "Product Manager III — ML Recommendations & Assortment Intelligence",
     company: "Walmart International",
-    location: "Northwest Arkansas",
+    location: "Bentonville, AR",
     startDate: "Apr 2022",
     endDate: "Present",
     bullets: [
-      "Owned product roadmap for assortment and merchandising analytics platforms supporting multiple international markets",
-      "Partnered with merchants, analytics, and engineering teams to deliver machine-learning-driven assortment recommendations adopted by regional teams",
-      "Contributed to measurable sales lift and improved planning efficiency through platform enhancements and workflow optimization",
-      "Supported rollout across Mexico, Canada, and Central America with localized requirements",
+      "Lead end-to-end product lifecycle for ML-driven assortment recommendation systems integrating sales signals, customer data, and inventory constraints to generate optimized modular assortments and layouts at scale",
+      "Own product strategy and roadmap for recommendation engine serving multiple international markets; achieved 95% merchant acceptance rate and $5.4M incremental revenue through iterative model-product improvements",
+      "Partner with data science, engineering, and merchant teams to define ML model requirements, validate outputs, and translate algorithmic recommendations into actionable assortment decisions",
+      "Design and deliver data-driven business narratives using Power BI and Scintilla dashboards to secure stakeholder alignment and prioritize product investments",
+      "Implemented automated data pipelines and standardized decision frameworks, reducing assortment cycle times by 50% and improving operational scalability",
     ],
   },
   {
-    role: "Product Specialist II",
+    role: "Product Specialist II — Assortment Analytics & ML Integration",
     company: "Walmart International",
-    location: "Northwest Arkansas",
+    location: "Bentonville, AR",
     startDate: "Apr 2021",
     endDate: "Apr 2022",
     bullets: [
-      "Supported development of customer-centric assortment analytics and recommendation capabilities",
-      "Collaborated with merchants and buyers to improve assortment relevance and customer experience metrics",
-      "Applied data-driven methods to support merchandising decisions across multiple categories",
+      "Led assortment optimization initiatives integrating ML model outputs and customer insights into merchant workflows to improve assortment relevance across international markets",
+      "Partnered with buyers to test modular layout hypotheses using ML-generated recommendations; created Power BI reports surfacing trade-offs between assortment breadth and space constraints",
+      "Coordinated cross-functional pilots and translated analytical outcomes into scalable operational rollouts",
     ],
   },
   {
-    role: "Technical Project Manager II",
+    role: "Technical Project Manager 2 — Merchandising Technology & Data Products",
     company: "Walmart Global Tech",
-    location: "Northwest Arkansas",
+    location: "Bentonville, AR",
     startDate: "Aug 2019",
     endDate: "Mar 2021",
     bullets: [
-      "Led cross-functional delivery of merchandising technology initiatives",
-      "Managed scope, timelines, and dependencies across engineering and business teams",
-      "Partnered with Agile and DevOps enablement groups to support improved delivery practices",
+      "Managed cross-functional delivery of merchandising technology and ML data products improving assortment recommendation quality and operational execution",
+      "Championed Agile and DevOps practices to accelerate delivery cycles and improve production reliability for ML analytics pipelines",
+      "Coordinated with Data Science & Engineering to deploy monitoring and production infrastructure for assortment models",
     ],
   },
   {
-    role: "Associate Technical Project Manager",
+    role: "Associate Technical Project Manager — Data Science & Engineering",
     company: "Walmart Global Tech",
-    location: "Northwest Arkansas",
+    location: "Bentonville, AR",
     startDate: "Jun 2018",
     endDate: "Jul 2019",
     bullets: [
-      "Supported international data science and engineering initiatives related to assortment analytics",
-      "Coordinated cross-functional teams on platform performance improvements and store-level personalization efforts",
+      "Partnered with International Data Science & Engineering to optimize production ML analytics jobs, cutting runtime from 12 hours to 1.5 hours and enabling faster model iteration",
+      "Served as liaison between engineering, data science, and merchant teams to ensure ML solutions addressed real merchant needs and supported modular execution",
     ],
   },
   {
-    role: "Project Analyst",
-    company: "Walmart Global Tech",
-    location: "Northwest Arkansas",
-    startDate: "Aug 2017",
-    endDate: "May 2018",
-    bullets: [
-      "Supported delivery of global sourcing and international analytics initiatives",
-      "Coordinated stakeholders during international solution rollouts",
-    ],
-  },
-  {
-    role: "Junior Process Associate",
-    company: "UST Global",
-    location: "Northwest Arkansas",
+    role: "Agile Consultant / Scrum Master",
+    company: "UST Global (supporting Walmart Technology)",
+    location: "Bentonville, AR",
     startDate: "Mar 2016",
     endDate: "Aug 2017",
     bullets: [
-      "Supported Agile delivery and process improvement initiatives for Walmart Technology data and analytics teams",
+      "Supported Walmart Global Data & Analytics transformation as SAFe Scrum Master; facilitated cross-team collaboration and process improvements across analytics engineering teams",
     ],
+  },
+];
+
+export const aiProjects = [
+  {
+    title: "Agentic AI Technical Curriculum",
+    description:
+      "Completed structured 20-hour learning plan covering agent loops, ReAct patterns, LangGraph, multi-agent system design, evaluation frameworks, and production safety.",
+  },
+  {
+    title: "AI-Powered PRD Generator",
+    description:
+      "Built a custom AI tool that produces both a formal Product Requirements Document and a companion PM Learning Guide, using LLM APIs and structured prompting.",
+  },
+  {
+    title: 'PM Mentor Skill ("Marty")',
+    description:
+      "Designed and deployed a custom Claude skill covering six PM domains (strategy, AI/ML product development, user research, metrics/OKRs, stakeholder management, agile) with integrated Substack research support.",
+  },
+  {
+    title: "Full-Stack AI Applications",
+    description:
+      "Built React applications with real-time features, integrating Claude Code, GitHub CI/CD, and modern LLM APIs. Hands-on experience with prompt engineering, tool use, and agentic patterns.",
+  },
+  {
+    title: "PM Content Creator",
+    description:
+      "Publish product management thinking on Substack, covering AI product strategy, frameworks, and applied PM leadership.",
   },
 ];
 
 export const education = [
   {
-    degree: "Master of Science, Data Science",
+    degree: "M.S., Data Science",
     school: "Southern Methodist University",
     dates: "2019",
   },
@@ -148,41 +153,23 @@ export const education = [
     dates: "2016",
   },
   {
-    degree: "Master of Arts, Sociology",
+    degree: "M.A., Sociology",
     school: "University of Arkansas",
     dates: "2013",
   },
   {
-    degree: "Bachelor of Arts, Sociology",
-    school: "Arkansas Tech University",
-    dates: "2011",
-  },
-  {
-    degree: "Associate of Arts, Criminal Justice",
+    degree: "B.A., Sociology",
     school: "Arkansas Tech University",
     dates: "2011",
   },
 ];
 
 export const certifications = [
-  "Digital Product Management: Modern Fundamentals — University of Virginia (2024)",
   "Certified Scrum Product Owner (CSPO)",
   "Professional Scrum Product Owner (PSPO)",
-  "SAFe Advanced Scrum Master",
+  "SAFe 4.5 Advanced Scrum Master",
   "SAFe Agilist",
-  "ISC2 Certified in Cybersecurity (CC)",
+  "Digital Product Management — University of Virginia",
+  "ISC2 CC",
   "CompTIA Security+",
 ];
-
-export const publications = [
-  "Predicting Wind Turbine Blade Erosion Using Machine Learning",
-  "Security-as-a-Service in a Multi-Cloud Environment",
-  "Blockchain: Considerations When Selecting a Framework",
-];
-
-export const militaryService = {
-  branch: "United States Marine Corps",
-  role: "Infantry Rifleman / LAV Crewman",
-  startDate: "Oct 2003",
-  endDate: "Oct 2007",
-};
