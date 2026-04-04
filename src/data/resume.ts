@@ -6,7 +6,7 @@ export const personalInfo = {
   location: "Bentonville, AR",
   bio: "Product manager with 7+ years of progressive experience shipping ML-powered products at Fortune 1 scale. Led development and deployment of production recommendation engines achieving 95% user acceptance and $5.4M incremental sales across international markets. Combines an M.S. in Data Science with hands-on AI building skills (agentic AI frameworks, LLM-powered tools, Python, SQL) and deep cross-functional leadership experience translating complex ML capabilities into products real users trust and adopt.",
   social: {
-    linkedin: "https://linkedin.com/in/scott-h-ma-msds-62110391",
+    linkedin: "https://www.linkedin.com/in/james-herford-62110391/",
     github: "https://github.com/GeraltMagic",
   },
 };
