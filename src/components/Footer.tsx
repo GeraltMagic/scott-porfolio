@@ -2,16 +2,16 @@ import { personalInfo } from "@/data/resume";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-gray-100">
-      <div className="max-w-5xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-400">
-        <p>&copy; {new Date().getFullYear()} {personalInfo.name}. All rights reserved.</p>
+    <footer className="border-t border-stone-200/60">
+      <div className="max-w-4xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-stone-400 tracking-wide">
+        <p>&copy; {new Date().getFullYear()} {personalInfo.name}</p>
         <div className="flex gap-4">
           {personalInfo.social.linkedin && (
             <a
               href={personalInfo.social.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-600 transition-colors"
+              className="hover:text-stone-600 transition-colors duration-300"
             >
               LinkedIn
             </a>
@@ -21,7 +21,7 @@ export default function Footer() {
               href={personalInfo.social.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-600 transition-colors"
+              className="hover:text-stone-600 transition-colors duration-300"
             >
               GitHub
             </a>

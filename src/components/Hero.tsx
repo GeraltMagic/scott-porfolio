@@ -2,27 +2,29 @@ import { personalInfo } from "@/data/resume";
 
 export default function Hero() {
   return (
-    <section className="max-w-5xl mx-auto px-6 py-24 md:py-32 text-center">
-      <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-gray-900">
+    <section className="max-w-4xl mx-auto px-6 pt-20 pb-16 md:pt-28 md:pb-20">
+      <p className="text-xs tracking-[0.2em] uppercase text-stone-400 mb-4">
+        {personalInfo.location}
+      </p>
+      <h1 className="text-3xl md:text-4xl font-light tracking-tight text-stone-800 leading-tight">
         {personalInfo.name}
       </h1>
-      <p className="mt-4 text-xl md:text-2xl text-gray-500">
+      <p className="mt-2 text-base md:text-lg font-light text-stone-400">
         {personalInfo.title}
       </p>
-      <p className="mt-2 text-gray-400">{personalInfo.location}</p>
-      <div className="mt-8 flex justify-center gap-4">
+      <div className="mt-8 flex gap-3">
         <a
           href="#contact"
-          className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+          className="text-xs tracking-wide font-medium px-5 py-2.5 bg-stone-800 text-stone-100 rounded-md hover:bg-stone-700 transition-colors duration-300"
         >
           Get in Touch
         </a>
         <a
           href="/resume.pdf"
           download
-          className="px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-lg hover:border-blue-600 hover:text-blue-600 transition-colors"
+          className="text-xs tracking-wide font-medium px-5 py-2.5 border border-stone-300 text-stone-500 rounded-md hover:border-stone-400 hover:text-stone-700 transition-colors duration-300"
         >
-          Resume
+          Download Resume
         </a>
       </div>
     </section>
