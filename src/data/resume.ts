@@ -29,7 +29,10 @@ export const skills = [
     items: [
       "Data Science",
       "Python",
+      "R",
       "SQL",
+      "Tableau",
+      "Jupyter",
       "Experimentation & A/B Testing",
       "Data Visualization (Power BI)",
     ],
