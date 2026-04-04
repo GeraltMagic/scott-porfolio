@@ -26,6 +26,16 @@ export default function Footer() {
               GitHub
             </a>
           )}
+          {personalInfo.social.substack && (
+            <a
+              href={personalInfo.social.substack}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-stone-600 transition-colors duration-300"
+            >
+              Substack
+            </a>
+          )}
         </div>
       </div>
     </footer>

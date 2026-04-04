@@ -8,6 +8,7 @@ export const personalInfo = {
   social: {
     linkedin: "https://www.linkedin.com/in/james-herford-62110391/",
     github: "https://github.com/GeraltMagic",
+    substack: "https://substack.com/@aldarametricsong",
   },
 };
 
