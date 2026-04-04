@@ -1,10 +1,12 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Skills from "@/components/Skills";
-import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
+import Skills from "@/components/Skills";
+import Certifications from "@/components/Certifications";
 import Education from "@/components/Education";
+import Publications from "@/components/Publications";
+import MilitaryService from "@/components/MilitaryService";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -15,10 +17,12 @@ export default function Home() {
       <main>
         <Hero />
         <About />
-        <Skills />
-        <Projects />
         <Experience />
+        <Skills />
+        <Certifications />
         <Education />
+        <Publications />
+        <MilitaryService />
         <Contact />
       </main>
       <Footer />

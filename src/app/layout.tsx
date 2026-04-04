@@ -5,9 +5,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "James Scott Herford — Product Manager",
+  title: "Scott Herford — Product Manager",
   description:
-    "Portfolio and resume of James Scott Herford, Product Manager.",
+    "Portfolio and resume of Scott Herford, Product Manager.",
 };
 
 export default function RootLayout({

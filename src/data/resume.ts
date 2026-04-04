@@ -1,132 +1,188 @@
 export const personalInfo = {
-  name: "James Scott Herford",
+  name: "Scott Herford",
   title: "Product Manager",
-  email: "james@example.com",
-  location: "San Francisco, CA",
-  bio: "Product manager with a passion for building user-centric digital experiences. I thrive at the intersection of business strategy, design, and technology — turning complex problems into elegant, scalable solutions. With experience across SaaS, fintech, and e-commerce, I bring a data-driven mindset and a collaborative approach to every product I ship.",
+  email: "james.scott.herford@gmail.com",
+  location: "Northwest Arkansas",
+  bio: "Product manager with 7+ years of experience delivering data-driven, analytics, and machine-learning-enabled products in large-scale retail and international environments. Proven ability to partner with engineering, data science, and business stakeholders to deliver measurable commercial outcomes. United States Marine Corps veteran.",
   social: {
-    linkedin: "https://linkedin.com/in/jamesherford",
-    github: "https://github.com/jamesherford",
+    linkedin: "https://linkedin.com/in/scottherford",
+    github: "https://github.com/GeraltMagic",
   },
 };
 
 export const skills = [
   {
-    category: "Product Strategy",
+    category: "Product Management",
     items: [
-      "Roadmap Planning",
-      "Market Research",
-      "Competitive Analysis",
-      "Go-to-Market Strategy",
-      "OKRs & KPIs",
+      "Product Management",
+      "Roadmapping",
+      "Agile Delivery",
+      "Stakeholder Management",
+      "OKRs",
+      "Experimentation",
     ],
   },
   {
-    category: "Analytics & Data",
+    category: "Data & Analytics",
     items: [
+      "Data & Analytics Platforms",
+      "Machine Learning Enablement",
       "SQL",
-      "Amplitude",
-      "Mixpanel",
-      "Google Analytics",
-      "A/B Testing",
+      "Python",
+      "Assortment Optimization",
     ],
   },
   {
     category: "Technical",
     items: [
-      "API Design",
-      "System Architecture",
+      "Cloud Platforms",
       "Agile / Scrum",
-      "JIRA",
-      "Technical Specifications",
+      "SAFe",
+      "DevOps",
+      "Cybersecurity",
     ],
   },
   {
-    category: "Design & UX",
+    category: "Domain",
     items: [
-      "User Research",
-      "Wireframing",
-      "Figma",
-      "Prototyping",
-      "Usability Testing",
+      "International Retail",
+      "Merchandising",
+      "Supply Chain",
+      "Data Science",
     ],
-  },
-];
-
-export const projects = [
-  {
-    title: "E-Commerce Platform Redesign",
-    description:
-      "Led a complete redesign of the checkout flow, resulting in a 25% increase in conversion rate and 15% reduction in cart abandonment.",
-    tags: ["Product Strategy", "UX Research", "A/B Testing"],
-    link: "#",
-  },
-  {
-    title: "Analytics Dashboard",
-    description:
-      "Built and launched an internal analytics dashboard that consolidated data from 5+ sources, reducing reporting time by 60%.",
-    tags: ["Data Analytics", "SQL", "Stakeholder Management"],
-    link: "#",
-  },
-  {
-    title: "Mobile App Launch",
-    description:
-      "Managed the end-to-end launch of a consumer mobile app from concept to 50K+ downloads in the first quarter.",
-    tags: ["Mobile", "Go-to-Market", "User Research"],
-    link: "#",
   },
 ];
 
 export const experience = [
   {
-    role: "Senior Product Manager",
-    company: "TechCorp Inc.",
-    location: "San Francisco, CA",
-    startDate: "Jan 2022",
+    role: "Cybersecurity Security Analyst Apprentice",
+    company: "Walmart",
+    location: "Northwest Arkansas",
+    startDate: "Jan 2024",
+    endDate: "Jan 2025",
+    bullets: [
+      "Participated in a structured cybersecurity apprenticeship focused on enterprise security operations, risk awareness, and workforce development",
+      "Engaged in approved industry panels and professional development events addressing cybersecurity talent pipelines and operational readiness",
+    ],
+  },
+  {
+    role: "Product Manager III",
+    company: "Walmart International",
+    location: "Northwest Arkansas",
+    startDate: "Apr 2022",
     endDate: "Present",
     bullets: [
-      "Own the product roadmap for a B2B SaaS platform serving 10K+ enterprise customers",
-      "Led cross-functional team of 12 engineers, 3 designers, and 2 data scientists",
-      "Increased user engagement by 40% through data-driven feature prioritization",
-      "Defined and tracked OKRs across quarterly planning cycles",
+      "Owned product roadmap for assortment and merchandising analytics platforms supporting multiple international markets",
+      "Partnered with merchants, analytics, and engineering teams to deliver machine-learning-driven assortment recommendations adopted by regional teams",
+      "Contributed to measurable sales lift and improved planning efficiency through platform enhancements and workflow optimization",
+      "Supported rollout across Mexico, Canada, and Central America with localized requirements",
     ],
   },
   {
-    role: "Product Manager",
-    company: "FinStart",
-    location: "New York, NY",
-    startDate: "Mar 2019",
-    endDate: "Dec 2021",
+    role: "Product Specialist II",
+    company: "Walmart International",
+    location: "Northwest Arkansas",
+    startDate: "Apr 2021",
+    endDate: "Apr 2022",
     bullets: [
-      "Managed the payments product line processing $50M+ in annual transactions",
-      "Shipped 15+ features based on user research and A/B testing insights",
-      "Collaborated with compliance and engineering to meet regulatory requirements",
-      "Reduced customer support tickets by 30% through UX improvements",
+      "Supported development of customer-centric assortment analytics and recommendation capabilities",
+      "Collaborated with merchants and buyers to improve assortment relevance and customer experience metrics",
+      "Applied data-driven methods to support merchandising decisions across multiple categories",
     ],
   },
   {
-    role: "Associate Product Manager",
-    company: "StartupXYZ",
-    location: "Austin, TX",
-    startDate: "Jun 2017",
-    endDate: "Feb 2019",
+    role: "Technical Project Manager II",
+    company: "Walmart Global Tech",
+    location: "Northwest Arkansas",
+    startDate: "Aug 2019",
+    endDate: "Mar 2021",
     bullets: [
-      "Conducted user interviews and synthesized insights into product requirements",
-      "Wrote detailed PRDs and technical specifications for engineering teams",
-      "Coordinated beta launches and gathered feedback from early adopters",
+      "Led cross-functional delivery of merchandising technology initiatives",
+      "Managed scope, timelines, and dependencies across engineering and business teams",
+      "Partnered with Agile and DevOps enablement groups to support improved delivery practices",
+    ],
+  },
+  {
+    role: "Associate Technical Project Manager",
+    company: "Walmart Global Tech",
+    location: "Northwest Arkansas",
+    startDate: "Jun 2018",
+    endDate: "Jul 2019",
+    bullets: [
+      "Supported international data science and engineering initiatives related to assortment analytics",
+      "Coordinated cross-functional teams on platform performance improvements and store-level personalization efforts",
+    ],
+  },
+  {
+    role: "Project Analyst",
+    company: "Walmart Global Tech",
+    location: "Northwest Arkansas",
+    startDate: "Aug 2017",
+    endDate: "May 2018",
+    bullets: [
+      "Supported delivery of global sourcing and international analytics initiatives",
+      "Coordinated stakeholders during international solution rollouts",
+    ],
+  },
+  {
+    role: "Junior Process Associate",
+    company: "UST Global",
+    location: "Northwest Arkansas",
+    startDate: "Mar 2016",
+    endDate: "Aug 2017",
+    bullets: [
+      "Supported Agile delivery and process improvement initiatives for Walmart Technology data and analytics teams",
     ],
   },
 ];
 
 export const education = [
   {
-    degree: "MBA, Technology Management",
-    school: "University of California, Berkeley — Haas School of Business",
-    dates: "2015 — 2017",
+    degree: "Master of Science, Data Science",
+    school: "Southern Methodist University",
+    dates: "2019",
   },
   {
-    degree: "B.S. Computer Science",
-    school: "University of Texas at Austin",
-    dates: "2011 — 2015",
+    degree: "Graduate Certificate, Enterprise Information Systems / Business Analytics",
+    school: "University of Arkansas",
+    dates: "2016",
+  },
+  {
+    degree: "Master of Arts, Sociology",
+    school: "University of Arkansas",
+    dates: "2013",
+  },
+  {
+    degree: "Bachelor of Arts, Sociology",
+    school: "Arkansas Tech University",
+    dates: "2011",
+  },
+  {
+    degree: "Associate of Arts, Criminal Justice",
+    school: "Arkansas Tech University",
+    dates: "2011",
   },
 ];
+
+export const certifications = [
+  "Digital Product Management: Modern Fundamentals — University of Virginia (2024)",
+  "Certified Scrum Product Owner (CSPO)",
+  "Professional Scrum Product Owner (PSPO)",
+  "SAFe Advanced Scrum Master",
+  "SAFe Agilist",
+  "ISC2 Certified in Cybersecurity (CC)",
+  "CompTIA Security+",
+];
+
+export const publications = [
+  "Predicting Wind Turbine Blade Erosion Using Machine Learning",
+  "Security-as-a-Service in a Multi-Cloud Environment",
+  "Blockchain: Considerations When Selecting a Framework",
+];
+
+export const militaryService = {
+  branch: "United States Marine Corps",
+  role: "Infantry Rifleman / LAV Crewman",
+  startDate: "Oct 2003",
+  endDate: "Oct 2007",
+};
