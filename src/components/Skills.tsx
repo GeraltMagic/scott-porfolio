@@ -6,7 +6,7 @@ export default function Skills() {
       <h2 className="text-xs tracking-[0.2em] uppercase text-stone-400 mb-8">
         Core Competencies
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {skills.map((group) => (
           <div key={group.category}>
             <h3 className="text-xs font-medium text-stone-500 mb-3">
