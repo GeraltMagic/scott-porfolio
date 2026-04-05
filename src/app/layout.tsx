@@ -10,7 +10,20 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "James Scott Herford — Senior Product Manager, AI/ML",
   description:
-    "Portfolio and resume of James Scott Herford, Senior Product Manager specializing in AI/ML products.",
+    "Product manager with 7+ years shipping ML-powered products at Fortune 1 scale. M.S. Data Science. Hands-on with agentic AI, LLMs, and recommendation engines.",
+  openGraph: {
+    title: "James Scott Herford — Senior Product Manager, AI/ML",
+    description:
+      "Product manager with 7+ years shipping ML-powered products at Fortune 1 scale. Recommendation engines, agentic AI, and hands-on building.",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary",
+    title: "James Scott Herford — Senior PM, AI/ML",
+    description:
+      "7+ years shipping ML-powered products at Fortune 1 scale.",
+  },
 };
 
 export default function RootLayout({

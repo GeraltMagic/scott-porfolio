@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WeatherWear — Scott Herford</title>
+  <meta name="description" content="Case study: WeatherWear — personalized clothing recommendation engine." />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <nav class="cs-nav">
+    <div class="container">
+      <a href="../index.html" class="cs-back">← Back to portfolio</a>
+      <a href="https://www.linkedin.com/in/james-herford-62110391/" target="_blank" rel="noopener" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.825rem;">LinkedIn</a>
+    </div>
+  </nav>
+
+  <main class="cs-body">
+    <div class="container">
+
+      <div class="cs-header">
+        <h1>WeatherWear</h1>
+        <p class="subtitle">Personalized clothing recommendation engine</p>
+        <div class="cs-meta">
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Role</span>
+            <span class="cs-meta-value">Solo — PM + engineer</span>
+          </div>
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Year</span>
+            <span class="cs-meta-value">2025</span>
+          </div>
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Status</span>
+            <span class="cs-meta-value">Complete prototype</span>
+          </div>
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Stack</span>
+            <span class="cs-meta-value">React · JSX · Lucide · Zero external dependencies</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Problem -->
+      <div class="cs-section">
+        <p class="cs-section-label">Problem</p>
+        <p>
+          Weather apps tell you the temperature. None of them tell you what to wear. And everyone's body is
+          different — 45°F feels like two entirely different things to someone who runs cold vs. someone
+          who runs hot, or a 65-year-old vs. a 28-year-old.
+        </p>
+        <p>
+          No tool personalizes clothing recommendations to the actual person, not just the weather.
+          This is a classic personalization gap: the input (weather) is generic, but the need (what to wear)
+          is individual.
+        </p>
+      </div>
+
+      <!-- How it works -->
+      <div class="cs-section">
+        <p class="cs-section-label">How the engine works</p>
+        <p>
+          Six environmental signals are extracted from weather input and normalized to a 0–1 scale.
+          A user profile adjusts every signal. Dynamic weights amplify active signals and dampen inactive ones.
+          A scoring function ranks 67 clothing items. Everything is explainable.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Signal</th><th>What it captures</th><th>Profile adjustments</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cold Stress</td>
+                <td>Cold protection need. Peaks below -20°F, zero above 65°F.</td>
+                <td>Thermal tendency, age cold sensitivity, activity warmth</td>
+              </tr>
+              <tr>
+                <td>Heat Stress</td>
+                <td>Cooling need. Zero below 70°F, peaks above 110°F.</td>
+                <td>Thermal tendency, age heat sensitivity, activity warmth</td>
+              </tr>
+              <tr>
+                <td>Wind Exposure</td>
+                <td>Wind chill risk on a 0–50 mph scale, amplified by cold.</td>
+                <td>Indirect via cold stress interaction</td>
+              </tr>
+              <tr>
+                <td>Precipitation</td>
+                <td>Snow = 1.0, heavy rain = 0.85, light rain = 0.5.</td>
+                <td>Environmental only</td>
+              </tr>
+              <tr>
+                <td>UV Exposure</td>
+                <td>Sun protection on 0–11 UV index scale.</td>
+                <td>Environmental only</td>
+              </tr>
+              <tr>
+                <td>Humidity Discomfort</td>
+                <td>Muggy conditions. Only activates when hot.</td>
+                <td>Indirect via heat stress</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><strong>User profile — three dimensions:</strong></p>
+        <ul>
+          <li><strong>Thermal tendency</strong> — runs cold / neutral / runs hot. Applies a ±5°F offset to effective temperature.</li>
+          <li><strong>Age bracket</strong> — under 30 through over 65. Increases cold and heat sensitivity with age.</li>
+          <li><strong>Activity level</strong> — sedentary / moderate / very active. Active users generate body heat, reducing cold stress.</li>
+        </ul>
+
+        <p style="margin-top: 16px;"><strong>Scoring:</strong> weighted dot product of <code>signal × weight × item_relevance</code> across all 67 items (35 everyday, 32 athletic). Items below 0.12 threshold are excluded. Results labeled Essential / Recommended / Optional.</p>
+      </div>
+
+      <!-- Dynamic weighting -->
+      <div class="cs-section">
+        <p class="cs-section-label">The weighting system</p>
+        <p>
+          Weights are not static. Each feature's weight is amplified when its signal is active and dampened
+          — but never zeroed — when inactive. Dampening without zeroing prevents blind spots: on a mild
+          but slightly windy day, wind still registers.
+        </p>
+        <p>
+          A <strong>30% bias cap</strong> prevents any single signal from dominating. Without it, a blizzard
+          collapses all recommendations to cold-weather gear only. Excess weight above the cap redistributes
+          proportionally to uncapped features via an iterative loop. All weights normalize to sum to 1.0.
+        </p>
+        <p>
+          This is the core engineering problem. Getting the redistribution logic right — bias cap plus iterative
+          normalization — matters more than the item database. A better algorithm on the same items beats a
+          bigger item catalog with a worse algorithm.
+        </p>
+      </div>
+
+      <!-- Explainability -->
+      <div class="cs-section">
+        <p class="cs-section-label">Explainability</p>
+        <p>
+          Every recommendation shows its numeric score, a color-coded feature contribution bar, and the top
+          driving factor. You don't just get "wear a rain jacket" — you get why: <em>Precipitation 0.85,
+          driving 34% of this recommendation's score.</em>
+        </p>
+        <p>
+          The Feature Importance panel shows all six signal strengths and their capped weights in real time.
+          As you change weather inputs, weights shift live. That transparency is a design choice: the system
+          earns trust by showing its work.
+        </p>
+      </div>
+
+      <!-- Feedback loop -->
+      <div class="cs-section">
+        <p class="cs-section-label">Feedback loop</p>
+        <p>
+          Each recommendation is ratable: accurate (✓), too warm (🔥), too cold (🥶), or irrelevant (✗).
+          Ratings drive live metrics displayed in the UI:
+        </p>
+        <ul>
+          <li><strong>Accuracy</strong> — % of rated items marked accurate</li>
+          <li><strong>Precision</strong> — true positives / (true positives + false positives)</li>
+          <li><strong>Recall</strong> — true positives / (true positives + false negatives)</li>
+          <li><strong>F1 Score</strong> — harmonic mean of precision and recall</li>
+          <li><strong>Coverage</strong> — % of recommendations that have been rated</li>
+        </ul>
+        <p>
+          The full session — weather input, profile, extracted features, weights, scored recommendations,
+          feedback labels, and computed metrics — exports as structured JSON. That's a training record.
+          The feedback loop was designed for model iteration from the first build.
+        </p>
+      </div>
+
+      <!-- Key decisions -->
+      <div class="cs-section">
+        <p class="cs-section-label">Key decisions</p>
+
+        <div class="decision-card">
+          <strong>No API key required</strong>
+          <p>Manual sliders plus 8 US city presets. Portable, demo-ready, works offline. Removing the backend dependency was a scope decision: prove the algorithm first, infrastructure later.</p>
+        </div>
+
+        <div class="decision-card">
+          <strong>Single file</strong>
+          <p>The entire engine — feature extraction, weighting, scoring, UI, feedback loop — is one <code>weatherwear.jsx</code> file. No build config, no external dependencies beyond React and Lucide. Drop it into any React project and it runs.</p>
+        </div>
+
+        <div class="decision-card">
+          <strong>Metrics panel built first</strong>
+          <p>Precision/recall/F1 were wired in before the item database was finalized. Building the metrics layer upfront forced clarity on what "accurate" means before the system was complete. Most teams add metrics as an afterthought. Here they shaped the design.</p>
+        </div>
+      </div>
+
+      <!-- Learnings -->
+      <div class="cs-section">
+        <p class="cs-section-label">Learnings</p>
+        <ul>
+          <li>Dynamic weights matter more than the item catalog. The redistribution algorithm — bias cap plus iterative normalization — is the core IP. Swapping items is easy. Getting the weights right is the hard part.</li>
+          <li>Effective temperature beats raw temperature for personalization. Profile adjustments are small (±5°F) but compound across multiple features, producing meaningfully different recommendations for different users in the same weather.</li>
+          <li>Explainability is not a feature — it's a trust mechanism. Users who see why an item was recommended are more likely to rate it accurately, which improves training data quality.</li>
+          <li>Building the feedback loop first changed the design. Knowing the system would produce training data shaped what signals were tracked, how items were labeled, and what the export format looked like.</li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Scott Herford</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/james-herford-62110391/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://substack.com/@aldarametricsong" target="_blank" rel="noopener">Substack</a>
+        <a href="https://github.com/GeraltMagic" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
